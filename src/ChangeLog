@@ -1,0 +1,4262 @@
+# Generate automatically. Do not edit.
+
+commit 7d59da5a80c633de027bb4d737ed4b6c4b67e32b
+Merge: 5232be8 6b08d4b
+Author: Martin Preisler <martin@preisler.me>
+Date:   2018-06-04
+
+    Merge pull request #67 from yuumasato/update_for_release
+    
+    Update version and translation files for release
+
+commit 6b08d4be982c0864e6223671f4e1a3c0b64d4fae
+Author: Watson Sato <wsato@redhat.com>
+Date:   2018-06-04
+
+    Updates version and translation files for release
+    
+    - Bump version in makefile and specfile
+    - Generate potfile
+
+ Makefile                    |   2 +-
+ oscap-anaconda-addon.spec   |   2 +-
+ po/oscap-anaconda-addon.pot | 138 ++++++++++++++++++++++++++++++--------------
+ 3 files changed, 97 insertions(+), 45 deletions(-)
+
+commit 5232be8fd443d84a313023866244aa5dfd726a74
+Author: Gabe <redhatrises@gmail.com>
+Date:   2018-04-23
+
+    Fix typos in firewall rule_handling.py
+
+ org_fedora_oscap/rule_handling.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit d9974fbe7852ecbd79d3d5a0444cbde8f6c9bc05
+Author: Gabe <redhatrises@gmail.com>
+Date:   2018-04-11
+
+    Add firewall rules
+    
+    - Fixes #19
+
+ org_fedora_oscap/rule_handling.py | 287 +++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 286 insertions(+), 1 deletion(-)
+
+commit 2ef8e5db89f37437252c831f2f69e5dd803f881b
+Merge: 5d13ba4 4a6c81c
+Author: Martin Preisler <martin@preisler.me>
+Date:   2018-04-30
+
+    Merge pull request #66 from matejak/improve-docs
+    
+    Expanded the 'how to test' document.
+
+commit 4a6c81c5025100f39c0e08155daff012ab0245ee
+Author: Matěj Týč <matyc@redhat.com>
+Date:   2018-04-30
+
+    Expanded the 'how to test' document.
+
+ docs/manual/developer_guide.adoc | 49 +++++++++++++++++++++++++++++++---------
+ 1 file changed, 38 insertions(+), 11 deletions(-)
+
+commit 5d13ba4da9687482e3806050342011657080dbd2
+Merge: 92a02a3 6fd1958
+Author: Martin Preisler <martin@preisler.me>
+Date:   2018-04-20
+
+    Merge pull request #65 from matejak/pep8
+    
+    Added PEP8 99-width config.
+
+commit 6fd195886ac1d2a3cc4b041b0da64a8f93a67e06
+Author: Matěj Týč <matyc@redhat.com>
+Date:   2018-04-20
+
+    Added PEP8 99-width config.
+
+ .pep8speaks.yml | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 92a02a3690d5dd8ef13caaf52e13b4204fc18bf5
+Merge: 6b7ced8 7f6cf03
+Author: Matěj Týč <matej.tyc@gmail.com>
+Date:   2018-04-11
+
+    Merge pull request #63 from redhatrises/add_kdump_addon_handling
+    
+    Add new kdump --disable rule handling
+
+commit 7f6cf03e2e5389555b69c2aec9a30867889f1362
+Author: Gabe <redhatrises@gmail.com>
+Date:   2018-04-10
+
+    Update if-else to use is instead of == and fix kdump_enabled logic
+
+ org_fedora_oscap/rule_handling.py | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+commit 3df75d37fa2e31ac461bc5af73d7bff6166245f1
+Author: Gabe <redhatrises@gmail.com>
+Date:   2018-04-05
+
+    Simplify logic in Kdump revert_changes function
+
+ org_fedora_oscap/rule_handling.py | 8 ++------
+ 1 file changed, 2 insertions(+), 6 deletions(-)
+
+commit b7c397c2d9e68ab1d9850763655f768ae6308e59
+Author: Gabe <redhatrises@gmail.com>
+Date:   2018-04-03
+
+    Simplify if logic in kdump_enabled function
+
+ org_fedora_oscap/rule_handling.py | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+commit 646dfce5baeeb359fb4904aaf19eed325b903127
+Author: Gabe <redhatrises@gmail.com>
+Date:   2018-03-29
+
+    Handle Kdump Addon default setting
+
+ org_fedora_oscap/rule_handling.py | 19 ++++++++++++++-----
+ 1 file changed, 14 insertions(+), 5 deletions(-)
+
+commit faefcabba927c1b7e9776c85611845dbdcb94ca1
+Author: Gabe <redhatrises@gmail.com>
+Date:   2018-03-29
+
+    Fix kdump if logic
+
+ org_fedora_oscap/rule_handling.py | 26 ++++++++++++--------------
+ 1 file changed, 12 insertions(+), 14 deletions(-)
+
+commit d46efdaf6dd5ab891e8a5143536d34d54f9a8d73
+Author: Gabe <redhatrises@gmail.com>
+Date:   2018-03-29
+
+    Update Kdump revert_changes to handle missing addon
+
+ org_fedora_oscap/rule_handling.py | 11 ++++++++---
+ 1 file changed, 8 insertions(+), 3 deletions(-)
+
+commit 881a39519ee95f65f985836d6a97ade001300e84
+Author: Gabe <redhatrises@gmail.com>
+Date:   2018-03-29
+
+    Refactor some of the code handling for KdumpRules
+
+ org_fedora_oscap/rule_handling.py | 47 ++++++++++++++++++++++++++-------------
+ 1 file changed, 31 insertions(+), 16 deletions(-)
+
+commit 14c3d2c1ba11062619788068e3e03efc87ed8704
+Author: Gabe <redhatrises@gmail.com>
+Date:   2018-03-27
+
+    Add default for Kdump arg
+
+ org_fedora_oscap/rule_handling.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 66feeeff6e7b9719994a2ddda8b586d8c2c49097
+Author: Gabe <redhatrises@gmail.com>
+Date:   2018-03-27
+
+    Reset dump rule_handling to defaults in KdumpRules.revert_changes
+
+ org_fedora_oscap/rule_handling.py | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 5b93fbeed7d63515fd345efa6d4e2aca4dcd8892
+Author: Gabe <redhatrises@gmail.com>
+Date:   2018-03-27
+
+    Add new kdump --disable rule handling
+    
+    - Adds new `kdump --disable` handling that can be added to anaconda scripts
+      to be able to disable kdump from OSCAP content
+
+ org_fedora_oscap/rule_handling.py | 61 +++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 61 insertions(+)
+
+commit 6b7ced8ab74e6200edf61afea7c621e8a9a186fa
+Merge: 93bbb94 82494d3
+Author: Marek Haičman <dahaic@users.noreply.github.com>
+Date:   2018-03-27
+
+    Merge pull request #62 from redhatrises/clarify_part_msg
+    
+    Clarify that missing partitions need to be created before selecting profile
+
+commit 82494d3ab5ef727bffde57a8283623361c227779
+Author: Gabe <redhatrises@gmail.com>
+Date:   2018-03-27
+
+    Fix phrasing and translation string for mountpoint
+
+ org_fedora_oscap/rule_handling.py | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+commit ef8f02ab0a718abeeb86cf4ccb24c687413f6e55
+Author: Gabe <redhatrises@gmail.com>
+Date:   2018-03-26
+
+    Clarify that missing partitions need to be created before selecting profile
+
+ org_fedora_oscap/rule_handling.py | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+commit 93bbb94ff0ef99e11f6b11a70e25a4ee4d8a6fde
+Merge: 64f9b03 84fbbe4
+Author: Marek Haičman <dahaic@users.noreply.github.com>
+Date:   2018-02-06
+
+    Merge pull request #61 from yuumasato/setup_translation_domain
+    
+    Define translation domain in OSCAPSpoke
+
+commit 84fbbe4a72073ec9077ee6c5a389f637c8f7e634
+Author: Watson Sato <wsato@redhat.com>
+Date:   2018-02-01
+
+    Define translation domain in OSCAPSpoke
+    
+    UI doesn't show translations if translation domain is not defined.
+
+ org_fedora_oscap/gui/spokes/oscap.glade | 2 +-
+ org_fedora_oscap/gui/spokes/oscap.py    | 3 +++
+ 2 files changed, 4 insertions(+), 1 deletion(-)
+
+commit 64f9b03b50458d5f4625b08977b96ab78b0a3daf
+Merge: da041d0 e7ac4c1
+Author: Marek Haičman <dahaic@users.noreply.github.com>
+Date:   2018-01-09
+
+    Merge pull request #58 from yuumasato/add_tests_datastream_handler
+    
+    Add tests datastream handler
+
+commit e7ac4c1e655f9e705b6803b0d53123484a88befa
+Author: Watson Sato <wsato@redhat.com>
+Date:   2018-01-09
+
+    Include testing_files in dist tarball
+    
+    Testing content testing_ds.xml, testing_ks.cfg, and xccdf.xml
+    are used to test DataStreamHandler.
+
+ Makefile | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit da041d01499d0dfadbc1d9f7688dcf9ed36f1c24
+Merge: 4758e9d 25a9e11
+Author: Marek Haičman <dahaic@users.noreply.github.com>
+Date:   2018-01-05
+
+    Merge pull request #57 from yuumasato/improve_password_report_only_test
+    
+    Improve test for password rule when report only is True
+
+commit fcc46fc900210cf48f780cff2f176548ef61d5b1
+Author: Watson Sato <wsato@redhat.com>
+Date:   2017-12-21
+
+    Free OSCAP session only if it exists
+    
+    When DataStreamHandler constructor receives invalid path to content,
+    no OSCAP session is created.
+    So, check if exists before deleting.
+
+ org_fedora_oscap/content_handling.py | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+commit dc1ab98d6e96bd962f94166099a180e324cbdf4e
+Author: Watson Sato <wsato@redhat.com>
+Date:   2017-12-21
+
+    Add tests for DataStreamHandler
+    
+    - tests for invalid path and content on object creation
+    - test for fetching datastream ids
+     test for fetching checklist ids
+    - test for fetching profile ids
+
+ tests/content_handling_test.py | 102 +++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 102 insertions(+)
+
+commit 25a9e11eee764c4f8d0ad373f9de3cdf52529bf6
+Author: Watson Sato <wsato@redhat.com>
+Date:   2017-12-20
+
+    Improve password rule report only test
+    
+    Add asserts for other relevant values which should not be changed
+    when report only is True.
+
+ tests/rule_handling_test.py | 23 ++++++++++++++++++++---
+ 1 file changed, 20 insertions(+), 3 deletions(-)
+
+commit 4758e9d8caf64ca5601c7eb08cba1c15eaa2eb87
+Merge: 2808849 99138ca
+Author: Marek Haičman <dahaic@users.noreply.github.com>
+Date:   2017-12-12
+
+    Merge pull request #56 from jan-cerny/rhbz1520276
+    
+    Fix a traceback in os.path.exists
+
+commit 99138cad106f2686c1327d03ca295e5a5e8cc2b4
+Author: Jan Černý <jcerny@redhat.com>
+Date:   2017-12-12
+
+    Fix a traceback in os.path.exists
+    
+    Fixes rhbz #1520276. Addressing:
+    Traceback (most recent call first):
+      File "/usr/lib64/python2.7/genericpath.py", line 18, in exists
+        os.stat(path)
+      File "/usr/share/anaconda/addons/org_fedora_oscap/ks/oscap.py", line 546, in execute
+        if os.path.exists(self.preinst_tailoring_path):
+      File "/usr/lib64/python2.7/site-packages/pyanaconda/addons.py", line 88, in execute
+        v.execute(storage, ksdata, instClass, users, payload)
+      File "/usr/lib64/python2.7/site-packages/pyanaconda/install.py", line 109, in doConfiguration
+        ksdata.addons.execute(storage, ksdata, instClass, u, payload)
+      File "/usr/lib64/python2.7/threading.py", line 765, in run
+        self.__target(*self.__args, **self.__kwargs)
+      File "/usr/lib64/python2.7/site-packages/pyanaconda/threads.py", line 227, in run
+        threading.Thread.run(self, *args, **kwargs)
+    TypeError: coercing to Unicode: need string or buffer, NoneType found
+
+ org_fedora_oscap/ks/oscap.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 280884976a356ed554c7f235479cb7f98d2ae3d2
+Merge: d4e2a86 acc6cb7
+Author: Martin Preisler <martin@preisler.me>
+Date:   2017-11-15
+
+    Merge pull request #55 from jan-cerny/new_test
+    
+    Add unittest for report_only parameter
+
+commit d4e2a867bf593806d47bb000b6ea6f7c8cd3283c
+Author: Martin Preisler <mpreisle@redhat.com>
+Date:   2017-11-14
+
+    Updated .gitignore
+
+ .gitignore | 3 +++
+ 1 file changed, 3 insertions(+)
+
+commit acc6cb7538dc4a70111a9d45218d09c3d8d4e699
+Author: Jan Černý <jcerny@redhat.com>
+Date:   2017-11-14
+
+    Add unittest for report_only parameter
+    
+    This test should be part of PR #53, but that was already merged.
+
+ tests/rule_handling_test.py | 22 ++++++++++++++++++++++
+ 1 file changed, 22 insertions(+)
+
+commit 6c31b34a9da4aac05821cd0625124c4078832f1d
+Merge: 37c08de 05fff47
+Author: Matus Marhefka <mmarhefk@redhat.com>
+Date:   2017-11-14
+
+    Merge pull request #54 from jan-cerny/unit_test_doc
+    
+    Describe unit tests in Developer Guide
+
+commit 05fff4727870e5858a5bb79656f56c1694e8d597
+Author: Jan Černý <jcerny@redhat.com>
+Date:   2017-11-14
+
+    Describe unit tests in Developer Guide
+    
+    I had a problem with dependencies of unit tests. Documentation
+    of unit tests was missing.
+
+ docs/manual/developer_guide.adoc | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+
+commit 37c08de227f2bf94ce2cb47545706560a512f50e
+Author: Martin Preisler <mpreisle@redhat.com>
+Date:   2017-11-13
+
+    Bumped version to 0.8
+
+ Makefile                  |  2 +-
+ oscap-anaconda-addon.spec | 17 ++++++++++++++---
+ 2 files changed, 15 insertions(+), 4 deletions(-)
+
+commit 0a496f779010e34d4437fcd787a60c4fdf25f1e0
+Merge: 9e3a10a 9ad7d8e
+Author: Marek Haičman <dahaic@users.noreply.github.com>
+Date:   2017-11-13
+
+    Merge pull request #53 from jan-cerny/password_reset
+    
+    Fix password rules cleaning
+
+commit 9ad7d8e17e1e810b75630648a96dfc04862154d7
+Author: Jan Černý <jcerny@redhat.com>
+Date:   2017-11-07
+
+    Fix password rules cleaning
+    
+    During manual installation when profile affecting password was selected,
+    selection of another profile did not clear the password requirements.
+    The method revert_changes didn't work because the saved old password
+    length was overwritten each time when eval_rules was invoked.
+    Saved old password length should be overwritten only if the eval_rules
+    method is called with report_only set to False.
+    Fixes rhbz #1374181 and issue #52.
+
+ org_fedora_oscap/rule_handling.py | 3 +++
+ 1 file changed, 3 insertions(+)
+
+commit 9e3a10a5a57dc8f3ecf6713eab3a0652dcfbd4aa
+Merge: 9bd3cc6 ff5824b
+Author: Matus Marhefka <mmarhefk@redhat.com>
+Date:   2017-10-27
+
+    Merge pull request #51 from jan-cerny/keyerror
+    
+    Catch KeyError
+
+commit ff5824bae6f83798275939ba3c205455e64aa7a4
+Author: Jan Černý <jcerny@redhat.com>
+Date:   2017-10-27
+
+    Catch KeyError
+    
+    Make sure it checks for empty actions dictionary.
+
+ org_fedora_oscap/rule_handling.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 9bd3cc66c67796e0455229a5bd0e36f23058362b
+Merge: 1e8e358 bfa04d6
+Author: Matus Marhefka <mmarhefk@redhat.com>
+Date:   2017-10-25
+
+    Merge pull request #49 from jan-cerny/rhbz1452667
+    
+    RHBZ#1452667: Catch Anaconda Remediations parsing errors
+
+commit 1e8e3582dacf07e254d64756bbbc341b01211636
+Merge: 8e9401a 6e90963
+Author: redhatrises <redhatrises@gmail.com>
+Date:   2017-10-24
+
+    Merge pull request #50 from jan-cerny/improve_guide
+    
+    Improve developer guide formating
+
+commit 6e90963683bfd779cb06dcfd5299525211e86ee7
+Author: Jan Černý <jcerny@redhat.com>
+Date:   2017-10-24
+
+    Improve developer guide formating
+    
+    The organization od the document was confused
+
+ docs/manual/developer_guide.adoc | 15 ++++++++-------
+ 1 file changed, 8 insertions(+), 7 deletions(-)
+
+commit bfa04d607f73df491ea2aa5e5cd291dfcaff88a9
+Author: Jan Černý <jcerny@redhat.com>
+Date:   2017-10-24
+
+    RHBZ#1452667: Catch Anaconda Remediations parsing errors
+    
+    The parser won't exit if it encouters something unexpected
+    in Ananconda remediations. Instead it will report a warning to log.
+    
+    Log this incident instead.
+
+ org_fedora_oscap/rule_handling.py | 28 ++++++++++++++++++++--------
+ 1 file changed, 20 insertions(+), 8 deletions(-)
+
+commit 8e9401ae2c6ea4cc0e42a1185931b33f8b091ac9
+Merge: b010f95 c4980f3
+Author: Marek Haičman <dahaic@users.noreply.github.com>
+Date:   2017-09-27
+
+    Merge pull request #48 from yuumasato/ssg-use-ds-by-default
+    
+    When using content from SSG, use the DataStream by default
+
+commit b010f95b3de288b55efca66aa2d4cbf1ffbb2153
+Merge: c8d3d6e 383cc01
+Author: redhatrises <redhatrises@gmail.com>
+Date:   2017-09-26
+
+    Merge pull request #39 from jan-cerny/issue36
+    
+    Don't forget to copy tailoring to new path
+
+commit c4980f356690768858780d5e81490230b0e04381
+Author: Watson Sato <wsato@redhat.com>
+Date:   2017-09-26
+
+    Fix parsing test for content-path
+
+ tests/ks_oscap_test.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit eacd5e35ac9676e5018bfb4012bb67d7b52d6f11
+Author: Watson Sato <wsato@redhat.com>
+Date:   2017-09-26
+
+    Name constant for SSG default content SSG_CONTENT
+
+ org_fedora_oscap/common.py           | 8 ++++----
+ org_fedora_oscap/gui/spokes/oscap.py | 4 ++--
+ org_fedora_oscap/ks/oscap.py         | 2 +-
+ 3 files changed, 7 insertions(+), 7 deletions(-)
+
+commit db32780339c586ee92ce1b24fa19dd3729e9cf6e
+Author: Watson Sato <wsato@redhat.com>
+Date:   2017-09-26
+
+    Add tests for content-path
+    
+    Change ParsingTest to use and expect content-path instead of xccdf-path.
+    Add BackwardCompatibilityParsingTest, which uses xccdf-path but expects
+    content-path.
+    OAA still accepts xccdf-path, but will use content-path internally.
+
+ tests/ks_oscap_test.py | 34 ++++++++++++++++++++++++++++++++--
+ 1 file changed, 32 insertions(+), 2 deletions(-)
+
+commit 1d97304abc9fe7e670cdef12faf6c47bc2587bbc
+Author: Watson Sato <wsato@redhat.com>
+Date:   2017-09-26
+
+    Add new key content-path
+    
+    Use of 'xccdf-path' to point to DataStream can be confusing, so
+    introduce 'content-path' to specify path of content files.
+    'content-path' can point to a XCCDF or DataStream file.
+    
+    'xccdf-path' still works as usual, for backwards compatibility.
+
+ org_fedora_oscap/gui/spokes/oscap.py |  8 ++++----
+ org_fedora_oscap/ks/oscap.py         | 27 ++++++++++++++-------------
+ tests/ks_oscap_test.py               |  8 ++++----
+ 3 files changed, 22 insertions(+), 21 deletions(-)
+
+commit f8e6f7096004675a43d17506dd090997600a53e2
+Author: Watson Sato <wsato@redhat.com>
+Date:   2017-09-26
+
+    Load DataStream when using content from SSG
+    
+    Instead of loading XCCDF files from SSG load DataStream.
+    
+    DataStreams carry everything needed bundled within, including CPE
+    dictionary, and OVAL definitions.
+    
+    This fixes problem with Rules returning notapplicable when it applies to
+    CPE "cpe:/a:machine".
+
+ org_fedora_oscap/common.py           | 8 ++++----
+ org_fedora_oscap/gui/spokes/oscap.py | 4 ++--
+ org_fedora_oscap/ks/oscap.py         | 2 +-
+ 3 files changed, 7 insertions(+), 7 deletions(-)
+
+commit c8d3d6ea652a9615e38789b41dea33ddc39f7911
+Merge: 9ee8987 6347191
+Author: Jan Černý <jcerny@redhat.com>
+Date:   2017-09-11
+
+    Merge pull request #46 from redhatrises/pep8_fixes
+    
+    More PEP8 fixes
+
+commit 63471914ce6b829132201633c1c4359fec178484
+Author: Gabe <redhatrises@gmail.com>
+Date:   2017-09-09
+
+    More PEP8 fixes
+
+ org_fedora_oscap/content_handling.py |  45 ++++++++-----
+ org_fedora_oscap/data_fetch.py       |   8 +++
+ org_fedora_oscap/gui/spokes/oscap.py |  87 ++++++++++++++-----------
+ org_fedora_oscap/ks/oscap.py         |  68 +++++++++++---------
+ org_fedora_oscap/rule_handling.py    |  70 ++++++++++++--------
+ org_fedora_oscap/utils.py            |  10 ++-
+ tests/data_fetch_test.py             |   1 +
+ tests/ks_oscap_test.py               |  33 ++++++----
+ tests/rule_handling_test.py          | 121 ++++++++++++++++++++++-------------
+ tests/utils_test.py                  |   3 +
+ 10 files changed, 278 insertions(+), 168 deletions(-)
+
+commit 9ee8987349ad5f68b9c8eef4587992da1586b5d4
+Merge: e0eed5f e306acb
+Author: Marek Haičman <dahaic@users.noreply.github.com>
+Date:   2017-09-09
+
+    Merge pull request #44 from redhatrises/update_spec_file
+    
+    Update .spec file
+
+commit e0eed5f0b4f9f7158fbd6dc0c7e42a2357ddd4d6
+Merge: c0de920 3bf3df5
+Author: Marek Haičman <dahaic@users.noreply.github.com>
+Date:   2017-09-09
+
+    Merge pull request #43 from redhatrises/makefile_python_versions
+    
+    Update Makefile to handle python2 and python3 tests
+
+commit e306acb208aa5e8e5aed0344cc1b048e947c6fc1
+Author: Gabe <redhatrises@gmail.com>
+Date:   2017-09-08
+
+    Update Makefile to use README.md
+
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit c0de9203bae98080ee0331818b5486acefc5f752
+Merge: 1f5611e 297030b
+Author: Marek Haičman <dahaic@users.noreply.github.com>
+Date:   2017-09-09
+
+    Merge pull request #42 from redhatrises/fix_dynamic_product
+    
+    Use pyanaconda constants module instead of product module
+
+commit cd1185750ab451f9f29ffa2c81e43f4fe47ea76a
+Author: Gabe <redhatrises@gmail.com>
+Date:   2017-09-08
+
+    Update .spec file
+    
+    - Update .spec file to handle both python2 and python3 for RHEL and Fedora
+
+ oscap-anaconda-addon.spec | 36 +++++++++++++++++++++++++++---------
+ 1 file changed, 27 insertions(+), 9 deletions(-)
+
+commit 3bf3df5e63e1b8ff7be3a6dafa50dccdc96b721b
+Author: Gabe <redhatrises@gmail.com>
+Date:   2017-09-08
+
+    Update Makefile to handle python2 and python3 tests
+    
+    - Makefile checks if OS is Red Hat Enterprise Linux 7 for python2 tests. If not, uses python3 tests
+
+ Makefile | 17 ++++++++++++-----
+ 1 file changed, 12 insertions(+), 5 deletions(-)
+
+commit 297030b53a31be44c17aa4dd9fa55a3e36b758f5
+Author: Gabe <redhatrises@gmail.com>
+Date:   2017-09-08
+
+    Use pyanaconda constants module instead of product module
+    
+    - pyanaconda constants module gets the product shortname whereas the product module
+      uses the full product name
+    - Fixes #38
+
+ org_fedora_oscap/common.py | 9 ++++-----
+ 1 file changed, 4 insertions(+), 5 deletions(-)
+
+commit 383cc012155a107543c35a52cb2ea5de57e9ae0f
+Author: Jan Černý <jcerny@redhat.com>
+Date:   2017-09-07
+
+    Don't forget to copy tailoring to new path
+    
+    Fixes #36.
+    We copy the XCCDF, but tailoring is needed as well.
+
+ org_fedora_oscap/ks/oscap.py | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 1f5611ebb55678d6a4db82d9bd818a1c0a788a9a
+Merge: fa76fc0 2504e98
+Author: Marek Haičman <dahaic@users.noreply.github.com>
+Date:   2017-09-08
+
+    Merge pull request #35 from redhatrises/fix_args_tests
+    
+    Fix some failing tests and pep8 complaints
+
+commit 2504e9800dd812ca2a806a0d758a8cd9ba8b0545
+Author: Gabe <redhatrises@gmail.com>
+Date:   2017-09-07
+
+    Ignore %end in KS string_test
+
+ tests/ks_oscap_test.py | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit 26112feb73e9b572d95fc5b8c9d14d5d1476fda8
+Author: Gabe <redhatrises@gmail.com>
+Date:   2017-09-07
+
+    Handle double newline in KS test
+
+ tests/ks_oscap_test.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit f8e35685401465ab99b1145cb114afee54664b7b
+Author: Gabe <redhatrises@gmail.com>
+Date:   2017-09-06
+
+    Passwords are no longer cleared as this breaks graphical and non-graphical installs
+    
+        - Fix passwd_minlen_short_passwd_test to pass without password being cleared
+        - Change revert_password_changes_test to revert_password_policy_changes_test
+          as passwords are no longer cleared.
+        - Add FIXME to revert_password_policy_changes_test for future test of password
+          policy changes
+
+ tests/rule_handling_test.py | 50 ++++++++-------------------------------------
+ 1 file changed, 9 insertions(+), 41 deletions(-)
+
+commit c3546fa07be82c8101bfe54e28ab2a26a8df3aaa
+Author: Gabe <redhatrises@gmail.com>
+Date:   2017-08-31
+
+    Update tests to match code change for FATAL message with root password being too short
+
+ tests/rule_handling_test.py | 56 ++++++++++++++++++++++++---------------------
+ 1 file changed, 30 insertions(+), 26 deletions(-)
+
+commit 9d3a59b0350862132e13c7bbe1ce202a498a0a9a
+Author: Gabe <redhatrises@gmail.com>
+Date:   2017-08-31
+
+    Remove unknown nosetest argument and fix chroot dirname
+
+ tests/common_test.py | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+commit 3696be7bf0598f541b9748138c1fd9390d533522
+Author: Gabe <redhatrises@gmail.com>
+Date:   2017-08-31
+
+    Fix some failing tests and pep8 complaints
+    
+    - Add '--reports' to expected args in tests
+    - Fix various pep8 complaints
+
+ tests/common_test.py   | 32 ++++++++++++++++++++------------
+ tests/ks_oscap_test.py | 13 ++++++++++---
+ 2 files changed, 30 insertions(+), 15 deletions(-)
+
+commit fa76fc069e4fd478be5386c3ccca1eaf5c525ff5
+Merge: 8db6c56 32ac9a1
+Author: Jan Černý <jcerny@redhat.com>
+Date:   2017-09-07
+
+    Merge pull request #34 from redhatrises/fix_readme_link
+    
+    Move README to README.md
+
+commit 32ac9a13e7d1bba0e65dd5031320139164227313
+Author: Gabe <redhatrises@gmail.com>
+Date:   2017-08-31
+
+    Remove SSG reference in link
+
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 74192120f533d9b2481a3561ab0ed44274939602
+Author: Gabe <redhatrises@gmail.com>
+Date:   2017-08-31
+
+    Move README to README.md
+    
+    - This makes README Markdown compliant so that it can be rendered correctly in GitHub
+
+ README => README.md | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 8db6c56ab72a2cad59cc74ebf8f33543bc88b5eb
+Merge: 6e9e74d 9e0725a
+Author: redhatrises <redhatrises@gmail.com>
+Date:   2017-08-31
+
+    Merge pull request #32 from jan-cerny/mention_script
+    
+    Mention create_update_image.sh in Developer Guide
+
+commit 9e0725a50e92b339c9cebcc526634b15202efddd
+Author: Jan Černý <jcerny@redhat.com>
+Date:   2017-08-31
+
+    Mention create_update_image.sh in Developer Guide
+    
+    The code here was moved to an executable script
+    create_update_image.sh in pull request #30.
+
+ docs/manual/developer_guide.adoc | 17 ++---------------
+ 1 file changed, 2 insertions(+), 15 deletions(-)
+
+commit 6e9e74dab53060da8e98025dcc26ce5900f859d6
+Merge: 0639949 630af25
+Author: redhatrises <redhatrises@gmail.com>
+Date:   2017-08-31
+
+    Merge pull request #33 from jan-cerny/fix_title
+    
+    Fix title of developer guide
+
+commit 630af257cb207c61fbf889372673dabf53ec5a76
+Author: Jan Černý <jcerny@redhat.com>
+Date:   2017-08-31
+
+    Fix title of developer guide
+
+ docs/manual/developer_guide.adoc | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 0639949a885df9997d432ef8d7b4e34d94ae3ffb
+Merge: c8a273c 485e854
+Author: Martin Preisler <martin@preisler.me>
+Date:   2017-08-30
+
+    Merge pull request #28 from redhatrises/add_product_detection
+    
+    Dynamically handle product and product version for both RHEL and Fedora systems
+
+commit 485e85455778b4e811084173bf6adc9498b1852e
+Author: Gabe <redhatrises@gmail.com>
+Date:   2017-08-30
+
+    Fix some pep8 complaints in common.py
+
+ org_fedora_oscap/common.py | 63 ++++++++++++++++++++++++++++++----------------
+ 1 file changed, 41 insertions(+), 22 deletions(-)
+
+commit 30879c2bbf94aee6e174a7ce7a3b9978a4bb4b22
+Author: Gabe <redhatrises@gmail.com>
+Date:   2017-08-30
+
+    Dynamically handle product and product version for both RHEL and Fedora systems
+
+ org_fedora_oscap/common.py | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+commit c8a273ce7646cadb1d81bb255bd4924cc4504fe5
+Merge: c029988 294a071
+Author: Martin Preisler <martin@preisler.me>
+Date:   2017-08-30
+
+    Merge pull request #30 from jan-cerny/create_update_image
+    
+    Add a script to build an update image
+
+commit c02998851a4a004a1060c6e550bd99c842bd6b90
+Merge: 47c8a47 908b480
+Author: Martin Preisler <martin@preisler.me>
+Date:   2017-08-30
+
+    Merge pull request #26 from redhatrises/add_developer_guide
+    
+    Add Developer Guide
+
+commit 47c8a475363489a2b869b282b9ae0b1b05c4b678
+Merge: 8a7ba65 2668ec4
+Author: Martin Preisler <martin@preisler.me>
+Date:   2017-08-29
+
+    Merge pull request #27 from redhatrises/add_cherry_pick_changes
+    
+    Allow using a file:// url for any SCAP guides pushed on the media or via an updates.img
+
+commit 8a7ba65a571f0fbf2c60f7f9e95524712fb896c3
+Merge: 64dcb53 f5143f0
+Author: Martin Preisler <martin@preisler.me>
+Date:   2017-08-29
+
+    Merge pull request #25 from redhatrises/add_html_report
+    
+    Add HTML reports
+
+commit 64dcb53e5870834d23eafd3b4c3779fced6b3b63
+Merge: 2af42ed 4236221
+Author: Martin Preisler <martin@preisler.me>
+Date:   2017-08-29
+
+    Merge pull request #31 from jan-cerny/gitignore
+    
+    Add .idea to .gitignore
+
+commit 4236221a7ef44b8613a9e8380ef80d093d7bda1e
+Author: Jan Černý <jcerny@redhat.com>
+Date:   2017-08-29
+
+    Add .idea to .gitignore
+    
+    .idea is used by PyCharm
+
+ .gitignore | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 294a07116322b88fa80ee9fbc20c51debce85acf
+Author: Jan Černý <jcerny@redhat.com>
+Date:   2017-08-29
+
+    Add a script to build an update image
+    
+    This is a copy paste from the wiki.
+    https://github.com/OpenSCAP/oscap-anaconda-addon/wiki/How-to-test-oscap-anaconda-addon
+    You won't need to copy paste the code from wiki anymore
+    if we have this code in the repository.
+
+ create_update_image.sh | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+
+commit 2668ec441527e30c3514bb26d01e75b5ec34b852
+Author: Pat Riehecky <riehecky@fnal.gov>
+Date:   2015-12-29
+
+    Allow using a file:// url for any SCAP guides pushed on the media
+    or via an updates.img
+
+ org_fedora_oscap/data_fetch.py | 22 ++++++++++++++++------
+ 1 file changed, 16 insertions(+), 6 deletions(-)
+
+commit 908b48026f1a01e9a4dc82b51d61ac08f757d09f
+Author: Gabe <redhatrises@gmail.com>
+Date:   2017-08-25
+
+    Add Developer Guide
+
+ README                           |  2 +-
+ docs/manual/developer_guide.adoc | 76 ++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 77 insertions(+), 1 deletion(-)
+
+commit f5143f0ba6bf182b3e185f37473c36b8faca25d2
+Author: Gabe <redhatrises@gmail.com>
+Date:   2017-08-25
+
+    Add HTML reports
+    
+    - Fixes #22
+
+ org_fedora_oscap/common.py | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 2af42edd71949e4494b24e7bb6957c9eb2294dcb
+Merge: 079f5fc 7f70a11
+Author: Martin Preisler <martin@preisler.me>
+Date:   2017-06-13
+
+    Merge pull request #21 from yuumasato/parse_html_tags_from_content
+    
+    Parse HTML tags from SCAP content
+
+commit 7f70a1167399ad7f8ce50e83cd78f43b0b6ca653
+Author: Watson Sato <wsato@redhat.com>
+Date:   2017-06-13
+
+    Parse HTML tags from SCAP content
+    
+    Some Profile descriptions contains HTML tags to structure and format the
+    content and oscap-anaconda-addon has problems interpreting them.
+    
+    This patch removes all HTML tags, while also trying to maintain
+    readability of content.
+
+ org_fedora_oscap/content_handling.py | 51 +++++++++++++++++++++++++++++++++---
+ 1 file changed, 48 insertions(+), 3 deletions(-)
+
+commit 079f5fcd249afa8c5b69811dd930135d4cfdd22f
+Merge: 5f7ce92 8d24858
+Author: Martin Preisler <martin@preisler.me>
+Date:   2017-03-31
+
+    Merge pull request #20 from poncovka/rhel7-branch-gtk_warnings
+    
+    Gtk: Fix gtk warning (#1437106)
+
+commit 8d2485856131cda7ccfafc75fddfb2156b48fe21
+Author: Vendula Poncova <vponcova@redhat.com>
+Date:   2017-03-30
+
+    Gtk: Remove app_paintable from a nav box (#1437106)
+    
+    The app_paintable property suppressed drawing of the upper bar's
+    background.
+    
+    Resolves: rhbz#1437106
+
+ org_fedora_oscap/gui/spokes/oscap.glade | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit b8e617cce89159b172260896ad2404009e6efa01
+Author: Vendula Poncova <vponcova@redhat.com>
+Date:   2017-03-30
+
+    Gtk: Fix overriding tab label for notebook (#1437106)
+    
+    The gtk warning was caused by an empty page in the notebook.
+    The page was removed.
+    
+    Resolves: rhbz#1437106
+
+ org_fedora_oscap/gui/spokes/oscap.glade | 27 ++++++++++++---------------
+ 1 file changed, 12 insertions(+), 15 deletions(-)
+
+commit 5f7ce927743c539686f54f134fae3d534c7d2dab
+Merge: 34e33a1 a62c496
+Author: Martin Preisler <martin@preisler.me>
+Date:   2017-03-08
+
+    Merge pull request #13 from ybznek/rhel7-branch-readme
+    
+    README: Reference wiki page
+
+commit 34e33a156dc37581f294b40beea996f191e786d9
+Author: Jiri Konecny <jkonecny@redhat.com>
+Date:   2017-02-13
+
+    Update oscap-anaconda-addon.spec
+    
+    It is no longer hosted on fedorahosted so fix the link.
+
+ oscap-anaconda-addon.spec | 9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+
+commit e90b9cd4c424f13629c7264508c762caf0409046
+Merge: 1a8a07b 0a21382
+Author: Martin Preisler <martin@preisler.me>
+Date:   2017-03-08
+
+    Merge pull request #18 from M4rtinK/rhel7-branch-use_init_done_signal
+    
+    Use the init_done signal instead of wait_all() (#1380224)
+
+commit 0a21382a7e76ce06bd484add725be3c5e41b216a
+Author: Martin Kolman <mkolman@redhat.com>
+Date:   2017-02-23
+
+    Use the init_done signal instead of wait_all() (#1380224)
+    
+    Using the wait_all() function provided by the Anaconda thread manager
+    singleton can result in unexpected behavior, as there might still be
+    threads unrelated to spoke initialization still running when the
+    function is called. This might result in unnecessary delay before the
+    OSCAP addon spoke becomes ready and installation can continue.
+    
+    So use the init_done signal, which is the proper way to wait for
+    Anaconda spokes to finish initialization.
+    
+    Also bump the Anaconda version to one that provides the init_done
+    signal.
+    
+    Resolves: rhbz#1380224
+
+ org_fedora_oscap/gui/spokes/oscap.py | 14 +++++++++++++-
+ oscap-anaconda-addon.spec            |  4 ++--
+ 2 files changed, 15 insertions(+), 3 deletions(-)
+
+commit a62c496acf5777cb5b635b5e9939f0b869af60e6
+Author: Zbynek Moravec <zmoravec@redhat.com>
+Date:   2016-10-26
+
+    README: Reference wiki page
+
+ README | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+commit 1a8a07b0325767e9892a95eb3118570d35354704
+Merge: 4886dd3 8b69608
+Author: Martin Preisler <martin@preisler.me>
+Date:   2016-10-19
+
+    Merge pull request #11 from ybznek/rhel7-branch-default
+    
+    Hide "Default" profile if contains no selected rules
+
+commit 4886dd39aab18badc8c3b09aad757367935c25fb
+Merge: a0fefee 2c33621
+Author: Martin Preisler <martin@preisler.me>
+Date:   2016-10-19
+
+    Merge pull request #10 from ybznek/rhel7-branch-log-error
+    
+    Log OpenSCAP errors
+
+commit 2c336213212887c53f639c2c05ad6d61ef6f303a
+Author: Zbynek Moravec <zmoravec@redhat.com>
+Date:   2016-10-18
+
+    Add correct prefix to log message
+
+ org_fedora_oscap/common.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 8b696089163d83d465221646fc26ed44819cf9fd
+Author: Zbynek Moravec <zmoravec@redhat.com>
+Date:   2016-10-16
+
+    Hide "Default" profile if contains no rules
+    
+    Resolves: rhbz#1256879
+
+ org_fedora_oscap/content_handling.py | 29 +++++++++++++++++++++--------
+ 1 file changed, 21 insertions(+), 8 deletions(-)
+
+commit 03a5496508b1b18fb98950dc6f50b8b561b42661
+Author: Zbynek Moravec <zmoravec@redhat.com>
+Date:   2016-10-17
+
+    Log OpenSCAP errors
+
+ org_fedora_oscap/common.py | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+
+commit a0fefee2daa21062bb7c96d4c0d80271803b01dd
+Merge: fb9c485 b32afed
+Author: Martin Preisler <martin@preisler.me>
+Date:   2016-09-13
+
+    Merge pull request #9 from M4rtinK/rhel7-branch-log_pwpolicy_changes
+    
+    Log password policy changes
+
+commit b32afeda0f19149389631b5fa9777ff6d5470782
+Author: Martin Kolman <mkolman@redhat.com>
+Date:   2016-09-12
+
+    Log password policy changes
+    
+    Log changes to password policy done by the OSCAP addon
+    and also log content of the password policy list.
+    
+    Related: rhbz#1365032
+
+ org_fedora_oscap/rule_handling.py | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+commit fb9c485418e59cfead3ab28d8ff8cfb7a19bba48
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2016-08-23
+
+    Don't require blank stderr when running the oscap tool
+    
+    It may report some warnings and complete successfully. It should be safe for us
+    to rely on the exit code.
+    
+    Resolves: rhbz#1355756
+
+ org_fedora_oscap/common.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit caa5b6a14c6c8175a3f4639df0863271564d16b2
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2016-08-23
+
+    Beware of the invalid profiles
+    
+    If a profile we cannot get pre-installation rules for is chosen we need to just
+    inform the user instead of crashing.
+    
+    Resolves: rhbz#1365130
+
+ org_fedora_oscap/gui/spokes/oscap.py | 28 ++++++++++++++++------------
+ 1 file changed, 16 insertions(+), 12 deletions(-)
+
+commit 1d9bfd13145273c14aac475fccc6b50b9957bc4b
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2016-08-23
+
+    Properly set the seen property for root passwords
+    
+    It is the property of the whole kickstart command object not the password
+    string.
+    
+    Resolves: rhbz#1357603
+
+ org_fedora_oscap/gui/spokes/oscap.py | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+commit bb3034ff76daeba590c6a206c75b99720f506a2c
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2016-06-30
+
+    Clear spoke's info before setting an error (#1349446)
+    
+    Otherwise the previous error message is shown (if any) instead of the new one.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 0499f43419a234f0c7bc77f1ed4ad93e096afec0
+Merge: 545720b 52abf43
+Author: Vratislav Podzimek <vpodzime@users.noreply.github.com>
+Date:   2016-05-31
+
+    Merge pull request #6 from M4rtinK/rhel7-branch-use_security_category_from_anaconda
+    
+    Use the System hub category provided by Anaconda
+
+commit 52abf43ad1869bf1f0893f70a8c05b0b13d477e1
+Author: Martin Kolman <mkolman@redhat.com>
+Date:   2016-05-17
+
+    Use the System hub category provided by Anaconda
+    
+    Use the Anaconda provides System category - that way the
+    OSCAP addon the more efficiently fit on the screen,
+    especially on low resolution displays.
+    
+    Also remove the Security category as it is no longer used anywhere.
+    
+    Related: rhbz#1269211
+
+ org_fedora_oscap/categories/__init__.py |  0
+ org_fedora_oscap/categories/security.py | 39 ---------------------------------
+ org_fedora_oscap/gui/spokes/oscap.py    |  4 ++--
+ 3 files changed, 2 insertions(+), 41 deletions(-)
+
+commit 545720b9ac10d82d79b29128545d2592716ebb57
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2016-05-30
+
+    Wait for Anaconda to settle before evaluation
+    
+    Otherwise we may win the race and evaluate the configuration before it's
+    actually setup "discovering" issues that don't exist in the end.
+    
+    Resolves: rhbz#1265552
+
+ org_fedora_oscap/gui/spokes/oscap.py | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+commit 5f512f6e9e72c10a4ad32a08b1bab095014c9057
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2016-05-26
+
+    Make the changes overview scrollable and smaller
+    
+    There might possibly be many changes which would cause the view to overflow the
+    screen or push some elements outside of the screen resulting in permanent damage
+    to Anaconda's UI. Let's prevent this from happening by making the view
+    scrollable. The 'automatic' policy should make sure there are no scrollbars
+    unless needed. Disabling the horizontal expand makes sure that the changes view
+    doesn't take too much space from the screen when not needed.
+    
+    Related: rhbz#1263582
+
+ org_fedora_oscap/gui/spokes/oscap.glade | 46 +++++++++++++++++++--------------
+ 1 file changed, 26 insertions(+), 20 deletions(-)
+
+commit 582a39f0bd5bab5be2f72a8b6178b4bc1dacecd3
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2016-05-25
+
+    Make the list of profiles scrollable
+    
+    This prevents really weird things from happening in case there are many profiles
+    or even just a few with long descriptions.
+    
+    Resolves: rhbz#1263582
+
+ org_fedora_oscap/gui/spokes/oscap.glade | 69 ++++++++++++++++++---------------
+ 1 file changed, 38 insertions(+), 31 deletions(-)
+
+commit b4b856cf69d43a8018061453ec881757c81ba389
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2016-05-25
+
+    Do not try to create a single file multiple times
+    
+    When extracting the archive, we may apparently get into a situation when we try
+    to extract a file or directory, that's already extracted/existing. Just skip
+    such a file/directory instead of causing a failure of the extraction process.
+    
+    Related: rhbz#1263315
+
+ org_fedora_oscap/common.py | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 7c4ffe3b7dc35f6ceb2f97b985f6d6f9b25ba4c0
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2016-05-25
+
+    Avoid crashes on extraction errors
+    
+    If there is an IOError or some problem with the cpio archive, we need to
+    transform the exception into our own so that it is properly caught and processed
+    in the best possible way in the UI layer.
+    
+    Resolves: rhbz#1263315
+
+ org_fedora_oscap/common.py | 21 ++++++++++++---------
+ 1 file changed, 12 insertions(+), 9 deletions(-)
+
+commit f8e5c1c38ef7a8813bbeaca15265f338ecdeb8aa
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2016-05-25
+
+    Disable GPG checks when installing content to the system
+    
+    When we are installing the SCAP content as an RPM package we are likely to be
+    missing some GPG keys. And since there are other means how to check the content
+    integrity and authenticity plus the fact we have already used the content for the
+    installation phase, the GPG check can be just turned off to prevent issues like
+    the one described in the bug.
+    
+    Resolves: rhbz#1263216
+
+ org_fedora_oscap/ks/oscap.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 5e7a6e648c85cf923093ebac6448be82ba032448
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2016-05-25
+
+    Allow fixing root password in graphical installations
+    
+    If the root password from kickstart is too short we can give users a chance to
+    enter a new (better) one in case of graphical installation. Text mode doesn't
+    allow for this because the root password configuration happens before the SCAP
+    content is evaluated.
+    
+    Resolves: rhbz#1265116
+
+ org_fedora_oscap/common.py           |  3 ++-
+ org_fedora_oscap/gui/spokes/oscap.py | 39 +++++++++++++++++++++++++++++++-----
+ org_fedora_oscap/rule_handling.py    | 29 ++++++++++++++++-----------
+ 3 files changed, 53 insertions(+), 18 deletions(-)
+
+commit 62d2e9832561d590fdcfbcab8bd03f5cb31fd5d1
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2016-05-25
+
+    Enforce the minimal root password length
+    
+    With Anaconda supporting the pwpolicy command putting restrictions on (among the
+    other things) root password minimal length we can actually enforce the policy
+    given in the SCAP content in interactive installations.
+    
+    Resolves: rhbz#1238281
+
+ org_fedora_oscap/rule_handling.py | 50 ++++++++++++++++++++++++++++++++++-----
+ 1 file changed, 44 insertions(+), 6 deletions(-)
+
+commit f3659640664657ef8c7649ed1a0ebf858b5a5c5a
+Merge: 0e3bfd1 377eec1
+Author: Vratislav Podzimek <vpodzime@users.noreply.github.com>
+Date:   2016-05-25
+
+    Merge pull request #5 from jkonecny12/rhel7-new-method-signature
+    
+    Use new method signature with payload class
+
+commit 0e3bfd1eb771802edab0d5f72dc7a9e8538f2fa7
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2016-05-17
+
+    Just report misconfiguration instead of crashing in text mode
+    
+    User should get to know what happened, but crashing and showing a traceback is
+    not really a great way to do it. Showing a text "dialog" with all the
+    information we have is much better.
+    
+    Resolves: rhbz#1263207
+
+ org_fedora_oscap/ks/oscap.py | 26 ++++++++++++++++++++++----
+ 1 file changed, 22 insertions(+), 4 deletions(-)
+
+commit 8fd9cbf91bb7190450531b25a3806c5b7f69744e
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2016-05-17
+
+    Do not verify SSL if inst.noverifyssl was given
+    
+    inst.noverifyssl is a boot/cmdline option which should take precedence over
+    everything specified in the kickstart or UI.
+    
+    Resolves: rhbz#1263257
+
+ org_fedora_oscap/data_fetch.py | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+
+commit 91b72ed3c71dbe1fe6a475f412b9290ebfb6e9c5
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2016-05-17
+
+    Also catch data_fetch.DataFetchError when trying to get content
+    
+    Otherwise everything crashes and a traceback is shown to the user instead of a
+    dialog (TUI) or proper error message (cmdline mode).
+    
+    Resolves: rhbz#1263239
+
+ org_fedora_oscap/ks/oscap.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 377eec1071b6a9e50973ba61fc1b0f5e23ec043d
+Author: Jiri Konecny <jkonecny@redhat.com>
+Date:   2016-04-25
+
+    Use new method signature with payload class (#1288636)
+    
+    You can now use payload class in setup() and execute() methods.
+    
+    Related: rhbz#1288636
+
+ org_fedora_oscap/ks/oscap.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit ae19eb551eb6733ea7a4cf7a4e526371971f1663
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2015-09-16
+
+    Do not remove the root password behind user's back (#1263254)
+    
+    If the chosen profile requires a longer password than what was set in kickstart,
+    consider it a misconfiguration like any other such issue instead of silently
+    removing the password and going on. Removing password brings two problems:
+    
+    1) in text mode it causes a system with no (empty) root password to be installed
+    
+    2) in graphical mode it causes the installation with a complete kickstart to
+    hang waiting for a new root password
+
+ org_fedora_oscap/rule_handling.py | 29 ++++++-----------------------
+ 1 file changed, 6 insertions(+), 23 deletions(-)
+
+commit d8b146ef85662677ac661e1606cb62e7b74d7d81
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2015-09-04
+
+    Completely skip the execute() part if no profile is selected (#1254973)
+    
+    If user didn't select any profile in the GUI we shouldn't create the
+    /root/openscap_data directory and shouldn't do any extra steps as those are not
+    necessary and could cause confusion.
+
+ org_fedora_oscap/ks/oscap.py | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+commit 47bda76d8a951b095c464931f5e9f81ee04fa2a9
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2015-08-24
+
+    Only allow DS and XCCDF ID selection if it makes sense (#1254876)
+    
+    If there's only one DS and a single XCCDF in it, there's no point in showing the
+    combo boxes that allow user to select the DS and XCCDF.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 30 +++++++++++++++++++++++-------
+ 1 file changed, 23 insertions(+), 7 deletions(-)
+
+commit d78f6866ffcbaa47a06b2bdc204d5be2cae478b9
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2015-08-24
+
+    Skip files unrecognized by the 'oscap info' command (#1255075)
+    
+    If a file is unrecognized by the 'oscap info' command (not a SCAP document), it
+    returns a non-zero exit code. Such files are not important for us, so let's just
+    ignore them.
+
+ org_fedora_oscap/content_handling.py | 14 ++++++++++----
+ 1 file changed, 10 insertions(+), 4 deletions(-)
+
+commit f137590aeca6ed2c8222c0a3bce956af98c89dac
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2015-08-19
+
+    Specify the name of the help content file (#1254884)
+    
+    Otherwise no help would be shown if the Help! button is clicked.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 3 +++
+ 1 file changed, 3 insertions(+)
+
+commit 5d96c21e7735a35eff5301c98cc552aa7d5a2e82
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2015-08-04
+
+    Make sure DS and XCCDF ID lists are correctly refreshed (#1240946)
+    
+    Otherwise in cases like when a different content is loaded, the spoke gets into
+    a weird state almost always resulting in a traceback (like in the bug report).
+
+ org_fedora_oscap/gui/spokes/oscap.py | 20 ++++++++++++++------
+ 1 file changed, 14 insertions(+), 6 deletions(-)
+
+commit 4a06d7d4d8c480b0dd54c1e6be661851ffe9228e
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2015-08-04
+
+    Make sure the DS and XCCDF ID combo boxes are visible for DS content (#1249951)
+    
+    Otherwise there's no way to change/select DS and XCCDF IDs. Also make sure they
+    are hidden when they are not supposed to be visible.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+commit 283cf8b21eba35a82a36989b16d52ec396bc8080
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2015-08-04
+
+    Try to load the OSCAP session early for DS content (#1247654)
+    
+    This gives us an easy way to handle invalid content early enough to prevent any
+    complicated recovery.
+    
+    Also, discard the session and create a new one when getting profiles for
+    particular DS ID - XCCDF ID combination because otherwise we would get wrong
+    results.
+
+ org_fedora_oscap/content_handling.py | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+
+commit 28aa3ea6325b43e6a12815457f431a49167898e3
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2015-08-04
+
+    Test preinst_content_path before raw_preinst_content_path (#1249937)
+    
+    If the SSG content is used, the content is already prepared for processing and
+    thus there's already valid content on the preinst_content_path so we need to
+    check for that before using the check of raw_preinst_content_path to decide
+    whether content download is needed or not.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 1 +
+ org_fedora_oscap/ks/oscap.py         | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+commit 010a079417d75cebc059798fcf3d1044453759e0
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2015-08-03
+
+    Clear any error if switching to the dry-run mode
+    
+    Nothing is done by the addon in the dry-run mode so there cannot be any error.
+    
+    Related: rhbz#1247677
+
+ org_fedora_oscap/gui/spokes/oscap.py | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+commit d0a558b6e150e7d78caa16b33ca9029f2d4cfc1f
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2015-08-03
+
+    Do not continue with and invalid profile ID (#1247677)
+    
+    If an invalid profile ID is given, we need to stop the installation and, report
+    an error and let user choose a different profile.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 46 ++++++++++++++++++++++++++++--------
+ 1 file changed, 36 insertions(+), 10 deletions(-)
+
+commit 498ba60ff643991a4561ab86a63fc32e09486c30
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2015-08-03
+
+    Cover all potential places with a non-main thread changing Gtk stuff (#1240967)
+    
+    There were a few more places where a non-main thread manipulated the Gtk objects
+    which sometimes caused Gtk and the whole anaconda to hang due to deadlocks. Make
+    sure all such actions are done in the main thread.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+commit 2b3cfce62d72e4154283e41e868a8430b7efc70c
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2015-03-30
+
+    Fix the Zanata server URL + version and update the .pot file
+    
+    (ported commit b36b882c265d8e9ef4bdd87d48188aeff0437198 from master)
+
+ po/oscap-anaconda-addon.pot | 80 ++++++++++++++++++++++++++++++---------------
+ zanata.xml                  |  4 +--
+ 2 files changed, 56 insertions(+), 28 deletions(-)
+
+commit 3f7833e9393c8ecf11ed1e914b879447c3aa9d4e
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2015-03-24
+
+    Switch translations support to fedora.zanata.org
+    
+    (cherry-picked commit d7c77a66e90ac92098b716dc6ca5d203abd3f292 from master)
+
+ .tx/config |   7 ----
+ Makefile   |   9 +++++-
+ zanata.xml | 106 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 114 insertions(+), 8 deletions(-)
+
+commit 3f9938a45b2fd7705e6fd40ab41231a79aaf5861
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2015-07-21
+
+    Better handle and report erroneous states
+    
+    So that users have a chance to find out what happened and fix the issue.
+    
+    Resolves: rhbz#1241064
+
+ org_fedora_oscap/gui/spokes/oscap.py | 93 ++++++++++++++++++++++++------------
+ 1 file changed, 62 insertions(+), 31 deletions(-)
+
+commit d65ef7fa809e9e5aa93051fc619906fe299aeeba
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2015-07-21
+
+    Make sure (some more) GUI actions run in the main thread (#1240967)
+    
+    Otherwise weird things happen because multiple threads manipulate with the
+    thread-unsafe Gtk structures.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit a0083e6c7fd03fd38c1fffbae63b2e547ef962f8
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2015-07-21
+
+    Beware of RPM->cpio entries' paths having absolute paths
+    
+    Otherwise the check for required files fails because the paths may be given as
+    relative.
+    
+    Related: rhbz#1241064
+
+ org_fedora_oscap/common.py | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit 0d0f3f54b56565326f2320acef6586eddc06bd10
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2015-07-21
+
+    Only output the kickstart section with content and profile set
+    
+    There may be a default content used (e.g. the SCAP Security Guide) with no
+    profile selected. Nothing related to the addon should appear in the resulting
+    kickstart in such case.
+    
+    Resolves: rhbz#1241395
+
+ org_fedora_oscap/ks/oscap.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 9cf9d865f9c51b7d7d82b3a768244bbed763731e
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2015-07-08
+
+    Just report integrity check failure instead of traceback (#1240710)
+    
+    That way users can continue with the installation in some way or exit the
+    installation in a user-friendly way.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 15 +++++++++++++--
+ org_fedora_oscap/ks/oscap.py         | 22 ++++++++++++++++++++--
+ 2 files changed, 33 insertions(+), 4 deletions(-)
+
+commit eb5c75eb590ff2eeac6b8c4e93d4589920cc3a9a
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2015-07-07
+
+    Properly react on download/loading issues in text+kickstart mode
+    
+    Instead of raising an exception in case of content download or loading issues we
+    should let users know and give them a chance to continue anyway (if possible).
+    
+    Related: rhbz#1240710
+
+ org_fedora_oscap/ks/oscap.py | 31 +++++++++++++++++++++++++++++--
+ 1 file changed, 29 insertions(+), 2 deletions(-)
+
+commit c899ac40c5793dc76e5c726d610ee17f9bc71d43
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2015-07-07
+
+    Fetch and process the content even if GUI doesn't take care of it (#1240625)
+    
+    We cannot rely on the GUI code fetching and loading the content because in text
+    kickstart installations it never gets a chance to do so.
+
+ org_fedora_oscap/ks/oscap.py | 35 ++++++++++++++++++++++++++++++++++-
+ 1 file changed, 34 insertions(+), 1 deletion(-)
+
+commit 046b160cfce6521c2a126cad267a2b43a54b50db
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2015-07-06
+
+    Do not output redundant/invalid fields for the SSG content (#1240285)
+    
+    The SSG content is specific and it doesn't require xccdf-path nor content-url
+    fields in the kickstart. Thus we should avoid putting them into the output that
+    may be later used as an input for more installations.
+
+ org_fedora_oscap/ks/oscap.py | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+commit 6f444b269f48dd3fa4e92d5ff8c17892558f7d63
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2015-07-06
+
+    Better handle unsupported URL types (#1232631)
+    
+    If a URL that is not supported by the addon is given, it needs to report that as
+    an issue instead of crashing.
+    
+    Unsupported URLs are either incomplete or not starting with a recognized and
+    supported protocol type.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 15 +++++++++++++++
+ org_fedora_oscap/ks/oscap.py         |  8 +++++++-
+ 2 files changed, 22 insertions(+), 1 deletion(-)
+
+commit 3f2ae1112b66ec1ec205d355ba2253d8fa30885d
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2015-07-06
+
+    React better on network issues (#1236657)
+    
+    Instead of raising an exception we should let users know that there was a
+    network error.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 16 +++++++++++++++-
+ 1 file changed, 15 insertions(+), 1 deletion(-)
+
+commit bdd43cf791634bd1be3375263fd6dc956a6fda13
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2015-07-06
+
+    Improve the description of the default profile (#1238080)
+    
+    The default profile usually contains no rules so we should reflect that in its
+    description.
+
+ org_fedora_oscap/content_handling.py | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+commit 157dbd4c4eff0543a60205e7be2939a9c1124780
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2015-07-06
+
+    Use the openscap-scanner package instead of openscap-utils (#1240249)
+    
+    openscap-utils pulls openscap-scanner as a dependency and openscap-scanner is
+    enough to perform the scan on the installed system.
+
+ org_fedora_oscap/ks/oscap.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 1a2f4f4db12bd45dd9b172be270db61f6766b589
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2015-07-06
+
+    Better handle the case with no profile selected (#1235750)
+    
+    We need to let user know that no profile is selected and avoid doing things that
+    are only needed when some profile *is* selected (like installing extra packages,
+    etc.).
+
+ org_fedora_oscap/gui/spokes/oscap.py | 3 +++
+ org_fedora_oscap/ks/oscap.py         | 9 +++++----
+ 2 files changed, 8 insertions(+), 4 deletions(-)
+
+commit b1e985b2cb489cc72637dde0590256cf0a7c5633
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2015-07-06
+
+    Add newline and one blank line after the %addon section (#1238267)
+    
+    Otherwise invalid kickstarts are produced when multiple addons are in the game
+    (as reported in the bug).
+
+ org_fedora_oscap/ks/oscap.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 67482a17a42efa67efaa6249711e31a4779f4b34
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2015-06-30
+
+    Word-wrap profile descriptions (#1236644)
+    
+    Otherwise the description is not fully displayed and what's more, Gtk+SPICE can
+    go crazy and shrink the screen.
+
+ org_fedora_oscap/gui/spokes/oscap.glade | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+commit 0f563b27a37c4005e619c74c4ed0d89033cc078a
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2015-06-30
+
+    Change paths to use RHEL 7's SSG instead of the Fedora's one
+
+ org_fedora_oscap/common.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 22405248ded30b443541bb638284f8c614d4bd99
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2015-01-07
+
+    New version - 0.7
+
+ Makefile                    |  2 +-
+ oscap-anaconda-addon.spec   | 16 +++++++++--
+ po/oscap-anaconda-addon.pot | 68 ++++++++++++++++++++++++---------------------
+ 3 files changed, 51 insertions(+), 35 deletions(-)
+
+commit 3b54bd32bebde053b2828d5b9afbcb929d08d98f
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2015-01-07
+
+    Adapt to changes in Anaconda
+    
+    Categories are now handled in a different way (shared by GUI and TUI), the
+    window widgets dropped some of their properties (in the .glade files) and the
+    ROOT_PATH constant was replaced by the getSysroot() function providing better
+    functionality.
+
+ org_fedora_oscap/{gui => }/categories/__init__.py |  0
+ org_fedora_oscap/{gui => }/categories/security.py |  6 +++---
+ org_fedora_oscap/gui/spokes/oscap.glade           |  8 +++-----
+ org_fedora_oscap/gui/spokes/oscap.py              |  2 +-
+ org_fedora_oscap/ks/oscap.py                      | 11 +++++------
+ oscap-anaconda-addon.spec                         |  4 ++--
+ 6 files changed, 14 insertions(+), 17 deletions(-)
+
+commit 0a58ae92ce199ee1565bcd1103b33c6e62d31d04
+Author: Ville Skyttä <ville.skytta@iki.fi>
+Date:   2014-03-27
+
+    Add *~ to EXCLUDES (#1081735)
+
+ Makefile | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 8ac7cc532cc532b463e8bcb6219e8a7c0a2d1a60
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-03-27
+
+    Set active profile when doing refresh
+    
+    Fixes the issue with the previously chosen profile not chosen when the spoke is
+    reentered.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 8242786bc588fa537ee4ddbac986d19e3e6cf60e
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-03-26
+
+    Set fetching flag to False when content processing fails
+    
+    Content processing error means the content was fetched and processed, so
+    fetching+initialization no longer runs.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 3 +++
+ 1 file changed, 3 insertions(+)
+
+commit 9e9f0ae10b718db94b8d682eb77f5eb0c889fb77
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-03-13
+
+    Fix the message when policy is not applied
+
+ org_fedora_oscap/gui/spokes/oscap.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit f87728979343eacfb785b2cd3b319cb46f498065
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-03-13
+
+    Change spoke's name to SECURITY POLICY
+    
+    It is about security policy, not only a security profile.
+
+ org_fedora_oscap/gui/spokes/oscap.glade | 2 +-
+ org_fedora_oscap/gui/spokes/oscap.py    | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 56559a4c429a31e2a55203738f595acc8acf9881
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-03-07
+
+    Define name of the spoke window
+    
+    Otherwise default "SPOKE NAME" appears in the GUI.
+
+ org_fedora_oscap/gui/spokes/oscap.glade | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 47443085a0f2d7ede5589af2d274a6520174cdc7
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-03-07
+
+    Set fetching flag to False when extraction error happens
+    
+    Extraction error means the content was fetched and processed, so
+    fetching+initialization no longer runs.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 3 +++
+ 1 file changed, 3 insertions(+)
+
+commit d22063180c17635556bce4ee20f8e4d7e0839c68
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-03-05
+
+    Remove code that was pushed to the anaconda's sources
+    
+    The two functions are useful for other addons and anaconda itself and were
+    accepted as part of the pyanaconda.ui.gui.utils module.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 43 ++----------------------------------
+ 1 file changed, 2 insertions(+), 41 deletions(-)
+
+commit 39a37f693f68df52fa0376f8ebc38243cb98fa21
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-28
+
+    Update spec file from downstream
+    
+    Fixes building issues on Fedora.
+
+ oscap-anaconda-addon.spec | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+commit ae3a3442a6456c04dcf1a2f71adf66160d5ddf08
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-28
+
+    New version - 0.6
+
+ Makefile                    |  2 +-
+ oscap-anaconda-addon.spec   | 10 +++++++++-
+ po/oscap-anaconda-addon.pot | 30 +++++++++++++++---------------
+ 3 files changed, 25 insertions(+), 17 deletions(-)
+
+commit 78fddf0933c3a3c529435ab24f7b24f43bc9f28a
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-28
+
+    Getting status needs to run in the main thread
+    
+    The status property reads data from the message store and thus needs to run in
+    the same thread as the Gtk main loop.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit a2bb960dc90de4bb302ad54c9c7dd34bf7896272
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-28
+
+    Grab focus for the URL entry after switching notebook page
+    
+    Doing it in the oposite order results in the URL not having the focus in the
+    end.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit d91b361dc6e52a9ddea8565a41f08a6ccc3215c4
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-28
+
+    Clear rule data when unselecting profile
+    
+    Unselecting profile means that rule data is no longer valid.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 3a60878087d336682381110d6bdccb11edeaaffa
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-28
+
+    Update message as part of the initialization
+    
+    We need the message store to be up to date to determine spoke's status.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 3 +++
+ 1 file changed, 3 insertions(+)
+
+commit 58c6afbb873ec0bbd086ac7c34e2c68be0b519b0
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-28
+
+    Add BuildRequires: gettext
+    
+    gettext is required for building translation files.
+
+ oscap-anaconda-addon.spec | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 291365f8052c03091d65cbe5359a1980826dce7b
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-28
+
+    Include translations in the tarball and RPM
+
+ Makefile                  | 1 +
+ oscap-anaconda-addon.spec | 3 ++-
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+
+commit 0fc11159aa822e02bf028433866c52f497e80ba2
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-27
+
+    New version - 0.5
+
+ Makefile                    |  2 +-
+ oscap-anaconda-addon.spec   | 39 ++++++++++++++++++++++++++++++++++++++-
+ po/oscap-anaconda-addon.pot | 43 ++++++++++++++++++++++++++-----------------
+ 3 files changed, 65 insertions(+), 19 deletions(-)
+
+commit 156880306c3b60f46a69880f0edd2af300b59fd1
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-27
+
+    Allow users to change content
+    
+    If we default to SSG or users put in wrong URL and fetch wrong content, they
+    should have a chance to use different content.
+
+ org_fedora_oscap/gui/spokes/oscap.glade |  1 +
+ org_fedora_oscap/gui/spokes/oscap.py    |  5 +++++
+ org_fedora_oscap/ks/oscap.py            | 11 +++++++++--
+ 3 files changed, 15 insertions(+), 2 deletions(-)
+
+commit 23244cf9a271c7d48642bc602b604fff0f5dbfff
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-27
+
+    Show and hide control buttons properly
+
+ org_fedora_oscap/gui/spokes/oscap.py | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+
+commit 6330594d2c7a7faf0252c933aed1b93cdb2bb262
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-27
+
+    Fix sensitivity of the URL entry and fetch button
+    
+    If no fetching is running and no content is specified, the URL entry and fetch
+    button should be made sensitive and proper focus should be set.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 17 +++++++++++------
+ 1 file changed, 11 insertions(+), 6 deletions(-)
+
+commit 136095c92c8d7f09cf8d805433ab9edb81c09d47
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-27
+
+    Add the button allowing users to use SSG content if available
+
+ org_fedora_oscap/gui/spokes/oscap.glade | 45 ++++++++++++++++++++++++++++++---
+ org_fedora_oscap/gui/spokes/oscap.py    | 25 ++++++++++++++++--
+ 2 files changed, 64 insertions(+), 6 deletions(-)
+
+commit 300652734cd11199080c254dd7e7a77f48024420
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-27
+
+    Fix listing python sources when creating potfile and regenerate it
+    
+    Fixing an issues made when copying the Makefile from a different project. Now
+    the potfile contains a bunch of new strings that should be translated.
+
+ po/Makefile                 |   2 +-
+ po/oscap-anaconda-addon.pot | 100 ++++++++++++++++++++++++++++++++++++++------
+ 2 files changed, 89 insertions(+), 13 deletions(-)
+
+commit 46a8c7be05680b4dc9b7d6c7df9d9e682bef55fe
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-27
+
+    Omit the %addon section from kickstart in dry-run mode
+    
+    Also fix the docstring.
+
+ org_fedora_oscap/common.py   | 6 ++++++
+ org_fedora_oscap/ks/oscap.py | 8 ++++++--
+ 2 files changed, 12 insertions(+), 2 deletions(-)
+
+commit e19a7b9e0bff1882e03d451b2d2ecffdc3e93c35
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-27
+
+    Implement the dry-run mode in the GUI (trac#2)
+    
+    We need to let users opt out when we provide the addon by default and use SSG by
+    default.
+
+ org_fedora_oscap/common.py              |  19 +++++
+ org_fedora_oscap/gui/spokes/oscap.glade |   1 +
+ org_fedora_oscap/gui/spokes/oscap.py    | 129 +++++++++++++++++++++++---------
+ 3 files changed, 115 insertions(+), 34 deletions(-)
+
+commit d0519db5aea0ead8d2a30c70f8c7849db3d32015
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-27
+
+    Add UI elements for content changing and dry-run mode
+    
+    These are needed now that we default to SSG if no other content is specified.
+
+ org_fedora_oscap/gui/spokes/oscap.glade | 59 +++++++++++++++++++++++++++++++--
+ 1 file changed, 56 insertions(+), 3 deletions(-)
+
+commit b9e732cbed1fe4c77601f4c4ac9d6a1d9b0ba561
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-24
+
+    Check content_defined instead of content_url in the GUI code
+    
+    When using SSG content_url is an empty string, but the content is defined.
+    
+    (issue appeared after a messed up rebase)
+
+ org_fedora_oscap/gui/spokes/oscap.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 121411a320a1811c5bb0993d62b80d863d42de6c
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-24
+
+    First select the profile, then update the message store
+    
+    Otherwise, there will be a wrong message reporting that no profile is selected.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+commit 1e4196c06a09c8c02efaf493484124d14ec637d4
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-24
+
+    Remove unused import
+
+ org_fedora_oscap/ks/oscap.py | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 68b9c7087fae97047e220580789f8779fcbabead
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-23
+
+    Ignore some more temporary/backup files
+
+ .gitignore | 3 +++
+ 1 file changed, 3 insertions(+)
+
+commit 13254f3d8fa258bdc8f98bc19d1bee1acbdc9d3b
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-23
+
+    If no content is specified and SSG is available, use it
+    
+    This is the expected behaviour on the SCAP-enabled composes.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+commit 0a8aa9c9ef5bccd16bdfa98b01caa711a2411c14
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-23
+
+    New special content type -- SCAP Security Guide
+    
+    SCAP Security Guide is expected to be the default content on SCAP-enabled
+    composes and thus need a bit special treatment.
+
+ org_fedora_oscap/common.py           | 13 +++++++++++++
+ org_fedora_oscap/gui/spokes/oscap.py | 16 +++++++++-------
+ org_fedora_oscap/ks/oscap.py         | 34 ++++++++++++++++++++++++++++++----
+ 3 files changed, 52 insertions(+), 11 deletions(-)
+
+commit c63589524318177af29a16e1af8aaf498a6a4fcf
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-18
+
+    Fix name of the property used when doing fingerprint check
+
+ org_fedora_oscap/gui/spokes/oscap.py | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+commit 66b954328d3f478742b7b82bdbe2eb7095a98eb7
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-18
+
+    Get rid of an unused variable
+
+ org_fedora_oscap/gui/spokes/oscap.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit b312fd4a6f231d29ea0f0c3a08def2a2d3b26b74
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-18
+
+    Fix data fetch locking to work properly with kickstart installations
+    
+    Kickstart installations do not trigger data fetch by clicking the Fetch button.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 25 +++++++++++++++++--------
+ 1 file changed, 17 insertions(+), 8 deletions(-)
+
+commit f8a7811640a273c2301b26c53197a3e88d36bbca
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-17
+
+    Use 'anonymous:' if no username and password is given for FTP
+    
+    This is how FTP servers usually work.
+
+ org_fedora_oscap/data_fetch.py | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+commit edaf603a06d8ddf29d1624dc4a7d7ef91ab0fdba
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-17
+
+    Initial version of the translations template file
+
+ po/oscap-anaconda-addon.pot | 102 ++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 102 insertions(+)
+
+commit ffbe21d9b31597e77aa6e4e551483e0791c3862f
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-16
+
+    First steps to dry-run mode
+
+ org_fedora_oscap/ks/oscap.py | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+commit a0e0782bc51819c99a0cdb7251a626bbd0b0b9c1
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-16
+
+    Fix main notebook tabs
+    
+    There are only two tabs and their names shouldn't be translated.
+
+ org_fedora_oscap/gui/spokes/oscap.glade | 15 ++-------------
+ 1 file changed, 2 insertions(+), 13 deletions(-)
+
+commit 917b673999bccc6e083198e5cb0f47204666dc9b
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-16
+
+    Make translations work
+
+ org_fedora_oscap/gui/spokes/oscap.py | 8 ++++----
+ org_fedora_oscap/rule_handling.py    | 4 ++--
+ 2 files changed, 6 insertions(+), 6 deletions(-)
+
+commit 5aa5ce8045ef46170ff31a8bb98e58da7e4d88aa
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-16
+
+    Manipulation with the i18n related files
+
+ .gitignore  |  3 ++-
+ .tx/config  |  7 ++++++
+ Makefile    | 10 ++++++++
+ po/Makefile | 80 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 99 insertions(+), 1 deletion(-)
+
+commit 4c9d26e03d998cc165621a005f564ccfb4422d80
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-16
+
+    If no profile is given, default to default
+    
+    That's how the oscap tool works.
+
+ org_fedora_oscap/ks/oscap.py | 2 +-
+ tests/ks_oscap_test.py       | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+commit e864eeb065022b4b8b25b3b37534adbe7eacfa65
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-16
+
+    Ignore updates.img and its auxiliary directory
+
+ .gitignore | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit bfda07c6789adaaffa18ce9a36616c3e61d0c79d
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-16
+
+    Catch only fetching errors from the fetching thread
+
+ org_fedora_oscap/gui/spokes/oscap.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit d912602e881651e392b6f919dc1a3c362ba142c9
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-16
+
+    Do not allow multiple simultaneous fetches/initializations
+
+ org_fedora_oscap/gui/spokes/oscap.py | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+
+commit b7905a7f87b6807f35173367606cff8c9056231a
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-16
+
+    Prevent user from changing the URL while we try to fetch from it
+    
+    Also behave consistently with invalid URL/content.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+commit f6e7115cc283704d23582d68aed8cd75ef0e0162
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-14
+
+    Add support for the Default profile
+    
+    The SCAP documentation suggests a default profile to be always available. Either
+    it means all rules if no profile is created in the content or first profile in
+    the content, etc., but that's handled by the oscap tool.
+
+ org_fedora_oscap/common.py           | 8 ++++++--
+ org_fedora_oscap/content_handling.py | 5 +++--
+ 2 files changed, 9 insertions(+), 4 deletions(-)
+
+commit 100b659af03983116b989f540c68f99c6ed4b537
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-14
+
+    Support FTP as a content source (#1050980)
+    
+    Users may want to use FTP instead of HTTP(S).
+
+ org_fedora_oscap/data_fetch.py | 30 ++++++++++++++++++++----------
+ org_fedora_oscap/ks/oscap.py   |  2 +-
+ 2 files changed, 21 insertions(+), 11 deletions(-)
+
+commit 7d772cb4fc44fd491c46fb0c6cf91a2a84f8dfcc
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-14
+
+    React properly on archive extraction failure
+
+ org_fedora_oscap/gui/spokes/oscap.py | 24 ++++++++++++++++++++----
+ 1 file changed, 20 insertions(+), 4 deletions(-)
+
+commit 099050953ac8609af9f954ef733e5612c809e0a6
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-14
+
+    Refactor the code pre-processing the fetched content
+    
+    There's no need to pass callbacks as parameters, they are all methods of the
+    same class, we can call them directly. Also parts of the code can be reused as a
+    standalone method.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 63 ++++++++++++++++--------------------
+ 1 file changed, 27 insertions(+), 36 deletions(-)
+
+commit ceff85a194ba4b745901482b95699a0fed2c9292
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-02-14
+
+    Unify exceptions from archive extraction
+    
+    This way it's easier to process them.
+
+ org_fedora_oscap/common.py | 20 +++++++++++++++++---
+ 1 file changed, 17 insertions(+), 3 deletions(-)
+
+commit db3a744c5c92c8fa6ac258fecc01d929a5fa7b45
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-01-23
+
+    Make pylint check mandatory to pass
+    
+    Also inform the caller about what's happening.
+
+ Makefile | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+commit b8b1b551038279caf4e2e488f439bb5404e5c034
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-01-23
+
+    Support for hash based content integrity checking
+
+ org_fedora_oscap/content_handling.py |  5 ++++
+ org_fedora_oscap/gui/spokes/oscap.py |  9 +++++++
+ org_fedora_oscap/ks/oscap.py         | 35 +++++++++++++++++++++++--
+ org_fedora_oscap/utils.py            | 51 ++++++++++++++++++++++++++++++++++++
+ tests/ks_oscap_test.py               | 33 +++++++++++++++++++++++
+ 5 files changed, 131 insertions(+), 2 deletions(-)
+
+commit 576bce486f12a24528ab7eb28074e4b525139bf3
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-01-14
+
+    It's now 2014, I know!
+
+ oscap-anaconda-addon.spec | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit fea5fefadda2d5c47ccb419e553ed89ce8cdff9d
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-01-14
+
+    New version - 0.4
+
+ Makefile                  |  2 +-
+ oscap-anaconda-addon.spec | 23 ++++++++++++++++++++++-
+ 2 files changed, 23 insertions(+), 2 deletions(-)
+
+commit ae58d78e818526273ea9d158396f50a33abfca1c
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-01-14
+
+    Beware of running Gtk actions from a non-main thread
+    
+    Otherwise weird things may happen.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 14 ++++++++++++--
+ 1 file changed, 12 insertions(+), 2 deletions(-)
+
+commit bf7d82f4088ece4d53ac36dc7793587a6dbfad65
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-01-14
+
+    Fix path to the tailoring file when getting rules
+
+ org_fedora_oscap/gui/spokes/oscap.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 1afc030a046bed87a6c003c865d21716e9ed77a4
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-01-14
+
+    A git hook for running tests when pushing
+    
+    We don't want to push changes that break tests.
+
+ tools/pre-push | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+commit 369257c73e278d0a864d4cf2902cfb87a562088d
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-01-14
+
+    Inform user if no profile is selected
+    
+    It's not at all obvious, otherwise.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+commit 1a2db56a03b6216655610f9c0d89ae19838d053f
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-01-14
+
+    Visually mark the selected profile
+    
+    This simple thing improves UX.
+
+ org_fedora_oscap/gui/spokes/oscap.glade | 13 ++++++++++++-
+ org_fedora_oscap/gui/spokes/oscap.py    | 23 ++++++++++++++++++++++-
+ 2 files changed, 34 insertions(+), 2 deletions(-)
+
+commit 4ff25267621942130ea68a51aa207dcbb885d590
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-01-14
+
+    Better UX with content URL entry and progress label
+    
+    If there is an error with fetching or processing content, the info should be
+    shown in a visible way. Also the focus should go to the entry with its text
+    selected because it is about to be changed.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 24 ++++++++++++++++++------
+ 1 file changed, 18 insertions(+), 6 deletions(-)
+
+commit 4f0be4614aded2c775c9bc929e1d20a661e62958
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-01-13
+
+    React on invalid content properly (#1032846)
+    
+    If we are given an invalid content, it's not fatal, we can simply let user enter
+    another URL.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 16 +++++++++++++++-
+ 1 file changed, 15 insertions(+), 1 deletion(-)
+
+commit 8fbc81e0d03fd6038a282ca2ff0dc76d9c6c0049
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-01-13
+
+    Stop spinner when data fetching is finished
+
+ org_fedora_oscap/gui/spokes/oscap.py | 3 +++
+ 1 file changed, 3 insertions(+)
+
+commit 3f896b8439108ad97d7974865ed70936f8a36a4d
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-01-13
+
+    Make the data fetching thread non-fatal (#1049989)
+    
+    Failed data fetching is a non-fatal state we can easily recover from.
+
+ org_fedora_oscap/common.py | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit b4122ca2c7340caadfa41e222d25df3edc9ee7fe
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-01-13
+
+    Exit code 2 from the oscap tool is not an error for us (#1050913)
+    
+    'man oscap' says:
+    Normally, the exit status is 0 when operation finished successfully and 1
+    otherwise. In cases  when oscap  performs  evaluation  of  the system it may
+    return 2 indicating success of the operation but incompliance of the assessed
+    system.
+    
+    Only the success of the operation is important for us in that phase.
+
+ org_fedora_oscap/common.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 2412dab84855ec2c38bbcff74819ae629f4829f1
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-01-13
+
+    Be ready to work with archives/RPMs containing data streams
+    
+    If e.g. a tailoring file or CPE dictionary is used together with a data stream
+    file the whole content provided to the addon will likely be an archive or an
+    RPM.
+    
+    We need to explore the extracted content files a bit more, decide which
+    content handling class to use and remember that for further decisions.
+
+ org_fedora_oscap/content_handling.py | 32 +++++++++++++++++++++++++-------
+ org_fedora_oscap/gui/spokes/oscap.py | 32 +++++++++++++++++---------------
+ 2 files changed, 42 insertions(+), 22 deletions(-)
+
+commit ba6b3ffcfb9fa19665fb784ee56558d0b3672a4a
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-01-13
+
+    Add unit tests for the keep_type_map function
+    
+    Heavy-duty non-trivial function, definitely deserves testing.
+
+ tests/utils_test.py | 63 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 63 insertions(+)
+
+commit 2e855214c85bb0ca35fb103a6873aed7b30686c1
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-01-13
+
+    Add support for namedtuples to keep_type_map
+    
+    Namedtuples are quite popular in modern Python coding style, we should support
+    them in such generic function.
+
+ org_fedora_oscap/utils.py | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+commit 12cec4cbed4526f25bf74b2e26281964864cf5c0
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-01-13
+
+    Add target for running pylint check
+    
+    Sometimes there's no need to run unit tests and it's only pylint's error check
+    that is important.
+
+ Makefile | 3 +++
+ 1 file changed, 3 insertions(+)
+
+commit 8e49c976dad64d76617b1be77d70006dc3516cad
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2014-01-13
+
+    Add target for running just unittests
+    
+    pylint is fine, but so slow. We need a way to run just unittests.
+
+ Makefile | 3 +++
+ 1 file changed, 3 insertions(+)
+
+commit 3bfc3fee630cb7a2eb078599f4c984f2fb310eb5
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-12-12
+
+    On the way to tailoring
+
+ org_fedora_oscap/common.py           | 17 +++++++++++----
+ org_fedora_oscap/content_handling.py | 40 +++++++++++++++++++++++++++++-------
+ org_fedora_oscap/gui/spokes/oscap.py | 13 ++++++++----
+ org_fedora_oscap/ks/oscap.py         |  2 +-
+ testing_files/tailoring.xml          | 13 ++++++++++++
+ 5 files changed, 69 insertions(+), 16 deletions(-)
+
+commit 64bf3986fcfe2c0d5ff17900f611317d1162d977
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-12-11
+
+    Tests for kickstart XCCDF tailoring handling
+
+ tests/ks_oscap_test.py | 38 +++++++++++++++++++++++++++++++++++---
+ 1 file changed, 35 insertions(+), 3 deletions(-)
+
+commit f279b9fdafcd5f1b9a690b1936152bc7336106e6
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-12-11
+
+    Kickstart support for XCCDF tailoring
+    
+    In order to make XCCDF tailoring work we first need to parse, store and use the
+    values provided by user.
+
+ org_fedora_oscap/ks/oscap.py | 34 +++++++++++++++++++++++++++++++++-
+ 1 file changed, 33 insertions(+), 1 deletion(-)
+
+commit 378d9f1c65cd7b8e784078a2ae391de0d8bc5f53
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-12-11
+
+    Check session validity also when using XCCDF benchmark
+    
+    This check is needed for data stream collection as well as for standalone
+    benchmarks.
+
+ org_fedora_oscap/content_handling.py | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+commit 1cff01577b68409a0a5962b56a973783be0f32a4
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-12-10
+
+    New version - 0.3
+
+ Makefile                  |  2 +-
+ oscap-anaconda-addon.spec | 35 ++++++++++++++++++++++++++++++++++-
+ 2 files changed, 35 insertions(+), 2 deletions(-)
+
+commit 6935776172186f2b03db00a04c83f88ef82fb087
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-12-10
+
+    Implement and use our own better function for joining paths
+    
+    The standard os.path.join function has weird behaviour in many cases.
+
+ org_fedora_oscap/common.py   |  6 +++---
+ org_fedora_oscap/ks/oscap.py | 29 ++++++++++++++---------------
+ org_fedora_oscap/utils.py    | 22 +++++++++++++++++++++-
+ tests/utils_test.py          | 19 +++++++++++++++++++
+ 4 files changed, 57 insertions(+), 19 deletions(-)
+
+commit c5d66ed27826b07d484a6df99f1858250ff164bf
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-12-10
+
+    The content entry should have focus if there is no content
+    
+    User is going to enter the content URL, so we may save them one predictable
+    click.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 3 +++
+ 1 file changed, 3 insertions(+)
+
+commit e14b1101419f12d78cab3316148ccc8a694a281a
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-12-10
+
+    RPM is just a weird archive in the pre-installation phase
+    
+    Instead of doing some magic around RPMs, we can simply treat them as archives in
+    the pre-installation phase.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 12 ++----------
+ org_fedora_oscap/ks/oscap.py         |  3 ---
+ 2 files changed, 2 insertions(+), 13 deletions(-)
+
+commit b04f50412ee6f7ab33d8a27c3f23c235a702271a
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-12-10
+
+    Ignore RPM files as well
+    
+    They shouldn't appear in the repository unless they are temporary files used for
+    testing.
+
+ .gitignore | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit bfbfc13fda3b93a31a6c204c1e5c99898ab10efd
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-12-10
+
+    Adapt tests to dir constants now ending with "/"
+
+ tests/ks_oscap_test.py | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+commit 716898ce956eb29a8993575a59497f30058299d8
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-12-10
+
+    CpioArchive cannot be created from a piped output
+    
+    It does seeks which don't work on pipes. Use temporary file instead.
+
+ org_fedora_oscap/common.py | 15 +++++++++++----
+ 1 file changed, 11 insertions(+), 4 deletions(-)
+
+commit f0632f4fd8eec799a7d1bc70e1f99374a65018f4
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-12-04
+
+    Fix namespace definitions in the testing XCCDF file
+    
+    libxml2 is more strict now so we should drop unused namespaces to prevent
+    issues.
+
+ testing_files/testing_xccdf.xml | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+commit d597248f4e53f6c8c9c529287c45ca10c4960f1d
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-12-04
+
+    Prevent putting None into xccdf_session_is_sds
+    
+    Putting None (null) into xccdf_session_is_sds causes segmentation fault, so we
+    should instead check the session validity in advance.
+
+ org_fedora_oscap/content_handling.py | 3 +++
+ 1 file changed, 3 insertions(+)
+
+commit 4aabeb38836272f2c19cec7e102d68d4b933421f
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-12-04
+
+    Fix the __all__ variable in the common module
+    
+    There are more functions that should be exported now.
+
+ org_fedora_oscap/common.py | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit 1c621ba95a33032295cff4eed158b86b008c4993
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-12-04
+
+    Strip content dir prefix when setting xccdf/cpe paths
+
+ org_fedora_oscap/common.py           | 26 ++++++++++++++++++++++++--
+ org_fedora_oscap/gui/spokes/oscap.py |  6 ++++--
+ org_fedora_oscap/utils.py            | 32 ++++++++++++++++++++++++++++++++
+ 3 files changed, 60 insertions(+), 4 deletions(-)
+
+commit e021966c286f7827541fcbdcd2e6658d5a93bf14
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-12-04
+
+    Inform user we now support archive URLs as well
+
+ org_fedora_oscap/gui/spokes/oscap.glade | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+commit c4b7e5808bb5dba46a2d4346927217ba7d8c7f3e
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-12-04
+
+    Ignore various file types in the git repository
+    
+    Ignore files that are typically just temporary files used for testing, editting,
+    etc.
+
+ .gitignore | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+commit 9d501deec4e9c949da9f3b30d3383cbd416ffcc3
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-12-04
+
+    Try to find content files in the fetched archive or RPM
+
+ org_fedora_oscap/content_handling.py | 31 +++++++++++++++++++++++++++++++
+ org_fedora_oscap/gui/spokes/oscap.py | 21 ++++++++++++++-------
+ 2 files changed, 45 insertions(+), 7 deletions(-)
+
+commit 62dde23a49488de240d6c40d026cc46cb89cc29a
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-12-04
+
+    Run pylint -E as part of the test target
+
+ Makefile                             | 2 ++
+ org_fedora_oscap/gui/spokes/oscap.py | 1 +
+ 2 files changed, 3 insertions(+)
+
+commit 7ef1c2f7db52eee104d93f3eb7f0efc909ae5b7e
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-12-04
+
+    Return list of extracted files/directories when extracting archive
+    
+    This information is needed for further processing to pick up the right content
+    files.
+
+ org_fedora_oscap/common.py | 20 +++++++++++++++-----
+ 1 file changed, 15 insertions(+), 5 deletions(-)
+
+commit 32430e52a0c8818180a8d70bd75f7672e0ba5f0b
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-12-04
+
+    Do not try to search for empty file paths in archives
+
+ org_fedora_oscap/common.py | 3 +++
+ 1 file changed, 3 insertions(+)
+
+commit 014327b06899cd763cda3b2f26f79e85a8f722a9
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-12-04
+
+    Properly set the content type based on the URL's suffix
+    
+    This is the first step to supporting interactive content fetching with anything
+    else than data streams.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+commit f2345f810e492925b93c80572fa7743b562d0385
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-12-03
+
+    Switch profiles on double-click
+    
+    If a profile is double-clicked, we should switch to it.
+
+ org_fedora_oscap/gui/spokes/oscap.glade |  4 +++-
+ org_fedora_oscap/gui/spokes/oscap.py    | 15 +++++++++++++++
+ 2 files changed, 18 insertions(+), 1 deletion(-)
+
+commit 60a4261e97d5ba8ee22460d01eca8ee64448f298
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-12-03
+
+    Hook urlEntry's activate signal to fetchButton click
+    
+    This makes hitting ENTER in the entry work the same way as clicking the fetch
+    button which simplifies keyboard navigation and speeds up work with the screen.
+
+ org_fedora_oscap/gui/spokes/oscap.glade | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit 6952e933a69ece236fd24eca056d1af6fbac75af
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-12-03
+
+    Save the spoke's glade file with a new Glade
+
+ org_fedora_oscap/gui/spokes/oscap.glade | 59 +++++++++++++++++----------------
+ 1 file changed, 30 insertions(+), 29 deletions(-)
+
+commit b360f125c24b9017e43ccecf629d6c1a51000964
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-12-02
+
+    The addon now requires the python-cpio package
+
+ oscap-anaconda-addon.spec | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit a5f562ed457b5d4798a9a72cc679867cef34f060
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-12-02
+
+    Use really_hide for the UI elements for datastream-id and xccdf-id
+
+ org_fedora_oscap/gui/spokes/oscap.py | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+commit 5ffffbdc57ba7d892a59e50a4c2105dc5289e04c
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-12-02
+
+    Support for RPM content in the GUI spoke
+
+ org_fedora_oscap/gui/spokes/oscap.py | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+commit a83cd9d11f77a76fa2e74cc726b284839c82f0d1
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-12-02
+
+    RPM content support for kickstart processing
+
+ org_fedora_oscap/ks/oscap.py | 18 ++++++++++++++++++
+ tests/ks_oscap_test.py       | 19 +++++++++++++++++++
+ 2 files changed, 37 insertions(+)
+
+commit 7ec1d71933ca97c3efca1617f2c2855725a5ce10
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-12-02
+
+    Add property for the raw post-installation content path
+    
+    It is needed for RPM content processing.
+
+ org_fedora_oscap/gui/spokes/oscap.py |  8 ++++----
+ org_fedora_oscap/ks/oscap.py         | 11 +++++++++--
+ tests/ks_oscap_test.py               | 19 ++++++++++++-------
+ 3 files changed, 25 insertions(+), 13 deletions(-)
+
+commit c01295c9db4cf53450a033b9cb01309480d048c7
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-12-02
+
+    Make content type case insensitive
+
+ org_fedora_oscap/ks/oscap.py | 11 ++++++-----
+ 1 file changed, 6 insertions(+), 5 deletions(-)
+
+commit f467cf62a5d988cb67123f2c53e6f4dca6dae08d
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-12-02
+
+    Rest of the code needed for RPM extraction
+    
+    Plus a few pylint-suggested tweaks.
+
+ org_fedora_oscap/common.py | 38 +++++++++++++++++++++++++++++---------
+ 1 file changed, 29 insertions(+), 9 deletions(-)
+
+commit 9dfe8c318508a7d73735c5cf5597767023ca7ac0
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-11-21
+
+    Actually look for the file path in entry names
+
+ org_fedora_oscap/common.py | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+commit b01bb043fccda2f4d04b0ca5812db5bab9dc8766
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-11-21
+
+    Basic stuff needed for the RPM content support
+
+ org_fedora_oscap/common.py           | 66 +++++++++++++++++++++++++-----------
+ org_fedora_oscap/gui/spokes/oscap.py |  2 +-
+ 2 files changed, 48 insertions(+), 20 deletions(-)
+
+commit e11e6b74de459a1bc23ac238307e240295eaec4c
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-11-14
+
+    Run tests in paralel
+
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 917aca4db553f05040b8b5e4e037e47ccfc8ea26
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-10-22
+
+    Specify files in a better way in spec
+
+ oscap-anaconda-addon.spec | 12 +-----------
+ 1 file changed, 1 insertion(+), 11 deletions(-)
+
+commit 98f686b81a6a8ad494f2d0b274a1a0816f466658
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-10-21
+
+    First version to be built
+
+ Makefile                  | 2 +-
+ oscap-anaconda-addon.spec | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+commit beabcd08b279f31d12d80d014b35bdd72a5f8dcc
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-10-21
+
+    Add some more build requires
+
+ oscap-anaconda-addon.spec | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 5b4142f6cef304322257cd663ec7478ee51fd715
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-10-21
+
+    Fix few things in the tarball
+
+ oscap-anaconda-addon.spec | 15 ++++++++++++++-
+ 1 file changed, 14 insertions(+), 1 deletion(-)
+
+commit cd381a64dd987924f88b1c5a5ee47195901537c5
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-10-21
+
+    Include unit tests in the dist tarball
+
+ Makefile | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit e6435a92d65faf55e58c8160d4ad6b6e35d6f90b
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-10-10
+
+    Very first version of the spec file
+
+ oscap-anaconda-addon.spec | 45 +++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 45 insertions(+)
+
+commit e4796bbfb18378c52d35f47d6b71721e00336bfa
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-10-10
+
+    Add Makefile targets for installation and uninstallation
+
+ Makefile | 55 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 55 insertions(+)
+
+commit 5ac620b27b94e4bb6a9c5cec25f614530e0b6f82
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-10-10
+
+    Add common files a good project should have
+
+ COPYING | 339 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ README  |   3 +
+ 2 files changed, 342 insertions(+)
+
+commit 7abfa5be20069e54479b29df6817767a12e955f4
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-06-22
+
+    Basic support for entering content URL in the GUI
+    
+    So far only valid data stream content is supported, anything else would cause
+    tracebacks.
+
+ org_fedora_oscap/gui/spokes/oscap.glade | 404 ++++++++++++++++++++++----------
+ org_fedora_oscap/gui/spokes/oscap.py    | 100 +++++++-
+ 2 files changed, 363 insertions(+), 141 deletions(-)
+
+commit dac96cfa2d912326edf581fb9f6b85a015e88755
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-06-22
+
+    Make content_name a property
+    
+    Statically assigned value may cause problems when changing content_url outside
+    of parsing kickstart values.
+
+ org_fedora_oscap/ks/oscap.py | 18 ++++++++++--------
+ 1 file changed, 10 insertions(+), 8 deletions(-)
+
+commit b89ea6842305c12687588d18aa01cb9f2eb645da
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-06-22
+
+    Add a function telling if we can fetch data from given URL
+
+ org_fedora_oscap/data_fetch.py | 16 +++++++++++++++-
+ tests/data_fetch_test.py       | 10 +++++++++-
+ 2 files changed, 24 insertions(+), 2 deletions(-)
+
+commit 74bb031b1ca10a3d3dce7ff3160e134e75881a7b
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-06-22
+
+    Simple Makefile with a target for running tests
+
+ Makefile | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 7fcd42ebff473522d209e9d6a47808f5b8c5873d
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-05-13
+
+    Inform user if no pre-installation rules have been found
+    
+    If no pre-installation rules are found in the chosen profile, add a message
+    informing about that instead of leaving the store empty.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+commit 8ef1e9489f432661328169388018fdd584c3b184
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-05-11
+
+    Testing files for non-datastream content
+
+ testing_files/scap-mycheck-oval.xml | 33 +++++++++++++++++++++++++
+ testing_files/xccdf.xml             | 48 +++++++++++++++++++++++++++++++++++++
+ 2 files changed, 81 insertions(+)
+
+commit 41dcdad9ce973d8a65f21906b4dbf8737bcd8264
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-05-11
+
+    Make GUI work with data streams or a plain benchmark
+
+ org_fedora_oscap/gui/spokes/oscap.glade |   4 +-
+ org_fedora_oscap/gui/spokes/oscap.py    | 113 ++++++++++++++++++++++----------
+ 2 files changed, 82 insertions(+), 35 deletions(-)
+
+commit 4c1dd1408258d67d20208479440f4b8288444c59
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-05-11
+
+    Return True/False from the set_treeview_selection
+    
+    This may come handy for debugging.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+commit deae874c5d692572f407eb23d73a8a8235560c73
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-05-11
+
+    Don't use the busied_cursor content manager
+    
+    It doesn't work.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 11 ++++-------
+ 1 file changed, 4 insertions(+), 7 deletions(-)
+
+commit 59e47e1ed757b71bd3c07ede3af687490fb298ac
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-05-10
+
+    Add property for the raw downloaded content data
+    
+    Also document the other properties of the OSCAPdata class.
+
+ org_fedora_oscap/ks/oscap.py | 11 +++++++++++
+ tests/ks_oscap_test.py       | 35 +++++++++++++++++++++++++++++++++++
+ 2 files changed, 46 insertions(+)
+
+commit adca762bbecc54576667c6a0037c225b25882ed5
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-05-10
+
+    Pass datastream and xccdf IDs to run_oscap_remediate
+
+ org_fedora_oscap/ks/oscap.py | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 1a93692a095afca9dd4c7a4bee378e264986c708
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-05-10
+
+    Define and use a property for the post-installation content path
+
+ org_fedora_oscap/ks/oscap.py | 21 ++++++++++++---------
+ tests/ks_oscap_test.py       |  4 ++++
+ 2 files changed, 16 insertions(+), 9 deletions(-)
+
+commit 5aa40af53961d4bba6c2ebd84b1370bb5a5ec3e5
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-05-10
+
+    Copy all content even if not using data stream
+
+ org_fedora_oscap/ks/oscap.py | 20 ++++++++++++++------
+ 1 file changed, 14 insertions(+), 6 deletions(-)
+
+commit cc015929c6108977006728c3ece7d759dfe026de
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-05-10
+
+    Add universal function for copying files and directories
+
+ org_fedora_oscap/utils.py | 32 ++++++++++++++++++++++++++++++++
+ 1 file changed, 32 insertions(+)
+
+commit 8f88f0c586e932483d6bf48c60dff4031f92f907
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-05-10
+
+    preinst_content_path's value depends on the content type
+    
+    For a data stream it should return the path to the data stream file, for the
+    other types it should return the path to the XCCDF file.
+
+ org_fedora_oscap/ks/oscap.py | 10 +++++++---
+ tests/ks_oscap_test.py       | 37 +++++++++++++++++++++++++++++++++++++
+ 2 files changed, 44 insertions(+), 3 deletions(-)
+
+commit 5aea543cfc71e77d5bb134f05892641f526bea94
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-05-10
+
+    Allow content type to be "archive"
+    
+    Changes needed only for correct parsing and checking.
+
+ org_fedora_oscap/common.py   |  2 ++
+ org_fedora_oscap/ks/oscap.py | 16 ++++++++++++----
+ tests/ks_oscap_test.py       | 31 +++++++++++++++++++++++++++++++
+ 3 files changed, 45 insertions(+), 4 deletions(-)
+
+commit 53fa6a31e08d016c00a89a0c6b5d8ec6de267bf2
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-05-10
+
+    Check if the relative path exists in the archive
+    
+    Testing just for filename is not reliable.
+
+ org_fedora_oscap/common.py | 18 ++++++++++++------
+ 1 file changed, 12 insertions(+), 6 deletions(-)
+
+commit a874b03008bfc82f7b58898aa7010f5000bd9457
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-05-10
+
+    Support for plain, gzipped and bzipped tarballs
+
+ org_fedora_oscap/common.py | 40 ++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 40 insertions(+)
+
+commit 43d102171887e4103d8cad63b4a483d8d951741f
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-05-10
+
+    Rename the zf variable to zfile
+    
+    The new name follows the variable naming conventions.
+
+ org_fedora_oscap/common.py | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+commit 75af0bd0783db918571a1ad66a4d0f6d717c2344
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-05-09
+
+    Add function for data extraction
+    
+    Only with the ZIP support for now, more archive types should follow later.
+
+ org_fedora_oscap/common.py | 34 ++++++++++++++++++++++++++++++++++
+ 1 file changed, 34 insertions(+)
+
+commit 8a03c695e55e9f29d550ba30686aa034579dd28e
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-05-09
+
+    Move constants and RuleData definition to the beginning
+
+ org_fedora_oscap/common.py | 16 +++++++++-------
+ 1 file changed, 9 insertions(+), 7 deletions(-)
+
+commit ed9201bfbc9293afe6cb846df6aff449a08fdd32
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-05-09
+
+    Use XCCDF session instead of importing benchmark directly
+    
+    This should work better with CPE dictionaries and some other stuff.
+
+ org_fedora_oscap/content_handling.py | 10 ++++++++--
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+
+commit 297d0a950666408de7df7b6bd78498b2807ebb3b
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-05-08
+
+    Remove no longer used constant
+
+ org_fedora_oscap/data_fetch.py | 2 --
+ 1 file changed, 2 deletions(-)
+
+commit 4dd5ef1196714f9752916605e6eaf46b473450dc
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-05-08
+
+    BenchmarkHandler for standalone XCCDF benchmarks
+    
+    First step to work with a content not bundled in a data stream.
+
+ org_fedora_oscap/content_handling.py | 55 ++++++++++++++++++++++++++++++++++++
+ 1 file changed, 55 insertions(+)
+
+commit aa02110462d3b71475f39a0ed10376f40f5fb594
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-05-08
+
+    Test if the file exists before trying to load it
+
+ org_fedora_oscap/content_handling.py | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+commit 186d989bcb2a9f56d6b55823069febbd0cc756f5
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-05-04
+
+    Add some more data to the testing data stream XML
+    
+    This is useful for GUI testing.
+
+ testing_files/testing_ds.xml | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+
+commit 9af0501e331404c3630f74cece4a42a901c24035
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-05-04
+
+    Enhance and better hook up the GUI
+
+ org_fedora_oscap/gui/spokes/oscap.glade |  25 ++++-
+ org_fedora_oscap/gui/spokes/oscap.py    | 160 ++++++++++++++++++++++++++++----
+ 2 files changed, 163 insertions(+), 22 deletions(-)
+
+commit 0afaad773180cee854ace2d04459c182803a6f2d
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-05-04
+
+    Locally disable pylint in some places
+    
+    Also fix the comment above the OSCAPspoke's methods
+
+ org_fedora_oscap/gui/spokes/oscap.py | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+commit c6a21f1b4f2d0c5928f44782f59934e1ae8c2ba1
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-05-04
+
+    Do nothing if reverting changes on a nonexisting mount point
+
+ org_fedora_oscap/rule_handling.py |  4 ++++
+ tests/rule_handling_test.py       | 14 ++++++++++++++
+ 2 files changed, 18 insertions(+)
+
+commit 06a187817889af43ed954320e217d5b00c46e71d
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-05-03
+
+    Basic hooking up of the UI elements
+
+ org_fedora_oscap/gui/spokes/oscap.glade |   6 +-
+ org_fedora_oscap/gui/spokes/oscap.py    | 157 +++++++++++++++++++++++++++++++-
+ 2 files changed, 159 insertions(+), 4 deletions(-)
+
+commit cd7c9860696333d0742241e874417582b5a87e96
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-05-03
+
+    Return dict instead of list of pairs
+    
+    get_data_streams_checklists should return a dict instead of a list of pairs,
+    because a dict can be used more easily.
+
+ org_fedora_oscap/content_handling.py | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+
+commit 0d8787a2242137339667d797cc2e91cda3335332
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-05-03
+
+    Minor tweaks of the gui.spokes.oscap module
+    
+    Mainly pylint suggestions and a better docstring for the OSCAPspoke class.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 23 ++++++++++++-----------
+ 1 file changed, 12 insertions(+), 11 deletions(-)
+
+commit eeb298842218bf46f0e19ccbaca9f5aa0adc44ac
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-05-03
+
+    Use OrderedDict for the data stream IDs and checklist IDs
+    
+    People expect the ordering of the IDs be the same as in their documents.
+
+ org_fedora_oscap/content_handling.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 9945ab027f237b68c60955406a4b3ff20838ed54
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-05-02
+
+    Add comboboxes for data streams and checklists
+    
+    Also add column for the profile ID.
+
+ org_fedora_oscap/gui/spokes/oscap.glade | 129 ++++++++++++++++++++++++++++++--
+ 1 file changed, 124 insertions(+), 5 deletions(-)
+
+commit 5aecf55f6285f6f95ccfe263a0315fc456bfdbc3
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-05-01
+
+    Add code for gathering items from the SCAP content
+    
+    For now only for datastreams, support for standalone benchmarks will be added
+    later.
+    
+    This will be needed by the GUI to allow users choose data stream, checklist and
+    profile interactively.
+
+ org_fedora_oscap/content_handling.py | 220 +++++++++++++++++++++++++++++++++++
+ 1 file changed, 220 insertions(+)
+
+commit 1ea8fe849d7bda538afdc89bd451e1c836fe5987
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-28
+
+    Add method for reverting changes to the RuleHandlers
+    
+    This is needed for switching from one profile to another one. All changes done
+    by the evaluation of the old profile's rules need to be reverted before the
+    rules from the new one can be evaluated.
+
+ org_fedora_oscap/rule_handling.py | 163 +++++++++++++++++++++++++++++++++-----
+ tests/rule_handling_test.py       | 143 +++++++++++++++++++++++++++++++--
+ 2 files changed, 279 insertions(+), 27 deletions(-)
+
+commit f9ab31d0c64458a36ec7a5b0fd379ce6f5d487ed
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-28
+
+    Fix the number of arguments in PasswdRules.eval_rules
+
+ org_fedora_oscap/rule_handling.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 93f8c9368a559649cc2f8d371a94665acf02dd36
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-22
+
+    Add comma to the warning and don't confuse Anaconda
+    
+    We need to clear the seen flag for the root password.
+
+ org_fedora_oscap/rule_handling.py | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+commit 2d8d1398ce87e713539e5eaf3eeebd7cc51cb574
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-21
+
+    ensure_dir_exists shouldn't raise exception on empty string
+
+ org_fedora_oscap/utils.py | 4 ++++
+ tests/utils_test.py       | 4 ++++
+ 2 files changed, 8 insertions(+)
+
+commit d6b89b975e30661345e7d3c39ef71f7d732b646b
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-21
+
+    Replace the custom magic code by pycurl
+    
+    There's no need to use our own buggy code when there is a working, tested and
+    fast library for that.
+
+ org_fedora_oscap/data_fetch.py | 94 +++++++++++-------------------------------
+ tests/data_fetch_test.py       | 23 +----------
+ 2 files changed, 26 insertions(+), 91 deletions(-)
+
+commit 67217aa58e4cb1537c9a3bc14527ae2f5a19631c
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-20
+
+    Evaluate boot loader rules (password requirement)
+
+ org_fedora_oscap/rule_handling.py | 14 +++++++++++---
+ tests/rule_handling_test.py       | 21 +++++++++++++++++++++
+ 2 files changed, 32 insertions(+), 3 deletions(-)
+
+commit 4266e479e423f6a907aaa6da123c4317069e206f
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-20
+
+    Cover various cases that can happen with root password
+    
+    The warning should reflect whether the password was set but too short or whether
+    it was set but as already crypted or whether it is missing at all.
+
+ org_fedora_oscap/rule_handling.py | 26 ++++++++++++--
+ tests/rule_handling_test.py       | 72 ++++++++++++++++++++++++++++++++++++++-
+ 2 files changed, 94 insertions(+), 4 deletions(-)
+
+commit aba27f758f54ac7d9502aff2daaa137f05934fc3
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-20
+
+    Report all mount points mentioned in the rules for now
+    
+    Until the revert_changes is implemented on all RuleHandlers, let's just report
+    all mount options mentioned in the rules. But still there should be no
+    duplicates added.
+
+ org_fedora_oscap/rule_handling.py | 18 +++++++------
+ tests/rule_handling_test.py       | 56 ++++++++++++++++++++++++++++++++++-----
+ 2 files changed, 60 insertions(+), 14 deletions(-)
+
+commit f8598a585d0b0ea5ae9e58194a6a2fd10ea1e990
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-20
+
+    Add even more testing fixes for pre-installation phase
+
+ testing_files/testing_ds.xml | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
+
+commit a32b79b4dca1a940f522c3cdc7ccad489f299963
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-20
+
+    Add apostrophes around the mount options and packages
+    
+    This makes them more visible in the UI.
+
+ org_fedora_oscap/rule_handling.py |  6 +++---
+ tests/rule_handling_test.py       | 24 ++++++++++++------------
+ 2 files changed, 15 insertions(+), 15 deletions(-)
+
+commit debd5b7e927d3b77441c87355b43b5aeea8ece25
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-20
+
+    Use shlex to split rules into args
+    
+    Rule lines are based on the shell syntax so they should be parsed that way.
+
+ org_fedora_oscap/rule_handling.py | 9 +++++----
+ tests/rule_handling_test.py       | 7 +++++++
+ 2 files changed, 12 insertions(+), 4 deletions(-)
+
+commit eaf8667326fbc50cf49c6c55cfa1826c46b898f1
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-20
+
+    Move bootloader kickstart command up
+    
+    This leaves storage configuration trailing in the end of the section which makes
+    it easily distinguishable and modifiable.
+
+ testing_files/testing_ks.cfg | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit d6e3db483fc3d5ada37fee132fbf529604a3e042
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-20
+
+    Test more features of the rule handling
+
+ testing_files/testing_ds.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit f70173485540e7c955cbae5bfd461a708ea03f55
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-19
+
+    Add rule for testing rule pre-installation rule evaluation
+
+ testing_files/testing_ds.xml | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+commit b3a5f8f41de841c327a756a5e84c8663f4217f74
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-19
+
+    Hook up the rule evaluation with GUI and kickstart
+    
+    GUI needs to evaluate rules to show errors, warnings and info messages and to
+    update the spoke's status and completion. kickstart needs to make sure there are
+    no errors remaining.
+
+ org_fedora_oscap/gui/spokes/oscap.glade |  2 +-
+ org_fedora_oscap/gui/spokes/oscap.py    | 59 +++++++++++++++++++++++++++++----
+ org_fedora_oscap/ks/oscap.py            | 22 +++++++++---
+ 3 files changed, 71 insertions(+), 12 deletions(-)
+
+commit 8b81d37f1cd50c5ec887f8dd5d771e72e030c2ea
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-19
+
+    Export the OSCAPaddonError from the common module
+
+ org_fedora_oscap/common.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit fc45d461ae7f65978edfa9ef411cc82524ee8952
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-19
+
+    Test no changes to mount options are made when just reporting
+
+ tests/rule_handling_test.py | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+commit 401fa33d933dc31870829512f2a933f7e2b974e6
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-19
+
+    Add code for rules evaluation
+
+ org_fedora_oscap/rule_handling.py | 114 +++++++++++++++-
+ tests/rule_handling_test.py       | 275 +++++++++++++++++++++++++++++++++++++-
+ 2 files changed, 381 insertions(+), 8 deletions(-)
+
+commit 73b5788492a55f9275ae508b261d4a50bafb8c2b
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-19
+
+    Base class for rule handlers
+    
+    Abstract class for the rule handling classes that are expected to override the
+    method for rules evaluation.
+
+ org_fedora_oscap/rule_handling.py | 35 ++++++++++++++++++++++++++++++-----
+ 1 file changed, 30 insertions(+), 5 deletions(-)
+
+commit 8b3992b01802f57f581f55210c152f62df3c9970
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-19
+
+    Define class for messages used in rule evaluation
+    
+    Also move message type contants to the common module.
+
+ org_fedora_oscap/common.py           | 12 ++++++++++++
+ org_fedora_oscap/gui/spokes/oscap.py |  9 ++++-----
+ 2 files changed, 16 insertions(+), 5 deletions(-)
+
+commit bb3c793d3bf6c7539505567a75aa3b28b88e1a41
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-18
+
+    Add code for handling bootloader password rule
+    
+    A common rule in SCAP profiles is that boot loader should be password protected.
+
+ org_fedora_oscap/rule_handling.py | 36 ++++++++++++++++++++++++++++++++++++
+ tests/rule_handling_test.py       |  5 +++++
+ 2 files changed, 41 insertions(+)
+
+commit 49e3a766e35addad4464de479f54314019233739
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-13
+
+    Add some more lines to the testing kickstart
+    
+    This saves a lot of clicking in the GUI and fully automates the installation.
+
+ testing_files/testing_ks.cfg | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+commit 4b89603dd324274ef2230519e96c505fbdca5101
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-13
+
+    Fix two places with self._data_subtree left over
+
+ org_fedora_oscap/gui/spokes/oscap.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 8250928bb7cc088f632eec5804ede7993ea934e7
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-13
+
+    Add code for handling package rules
+    
+    Such rules appear in the SCAP content and dealing with them pre-install may
+    shorten the installation and remediation time.
+
+ org_fedora_oscap/rule_handling.py | 67 +++++++++++++++++++++++++++++++++++++++
+ tests/rule_handling_test.py       |  9 ++++++
+ 2 files changed, 76 insertions(+)
+
+commit 32d3ebe45c64128c52bd4f0a4cbc7311dee1d072
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-13
+
+    First steps of the pre-installation fixes hooking
+
+ org_fedora_oscap/gui/spokes/oscap.py | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+
+commit fd239cd5a16ff0f5c1e9f5e90cf21cf66dbf0e8c
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-13
+
+    Make code ready for non-network data fetching
+    
+    Also document the waiting function in a better way.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 21 +++++++++++----------
+ 1 file changed, 11 insertions(+), 10 deletions(-)
+
+commit 8b42628e894ca064b1543cb94761501cd737499e
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-13
+
+    Define a property for the pre-installation content path
+    
+    Also rename self._data_subtree to shorter and better self._addon_data and fix
+    typo in tests.
+
+ org_fedora_oscap/gui/spokes/oscap.py |  9 +++------
+ org_fedora_oscap/ks/oscap.py         | 10 ++++++----
+ tests/ks_oscap_test.py               |  8 +++++++-
+ 3 files changed, 16 insertions(+), 11 deletions(-)
+
+commit 43f3ffeffa9bb7dd5ee0ec5d9d195e05e92dc60d
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-12
+
+    Document the thread_name parameter
+    
+    Also remove one leftover line.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+commit ae427830fa06a2651c3dcc06b881e3435976c49e
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-09
+
+    Testing kickstart file
+
+ testing_files/testing_ks.cfg | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+
+commit 6d1b9a956f5017795fe9c22cab2fa45b48fab49d
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-09
+
+    Tests for the utils module
+
+ tests/utils_test.py | 55 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 55 insertions(+)
+
+commit 5d886c513a2dce402b93f6b2d4690805aebc477d
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-08
+
+    Copy content to the target system and run remediation
+    
+    The content needs to be copied to the target system so that it can be used for
+    evaluation and remediation in chroot.
+
+ org_fedora_oscap/common.py   |  4 ++--
+ org_fedora_oscap/ks/oscap.py | 23 +++++++++++++++++++++--
+ 2 files changed, 23 insertions(+), 4 deletions(-)
+
+commit 58dca7ce68e009da69901625640c74a27d476158
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-08
+
+    Call os.chdir("/") after os.chroot
+    
+    This is what the chroot utility does and without it the oscap tool fails to
+    run in chroot.
+
+ org_fedora_oscap/common.py | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 2b4105f327c41fa4a5713cc39150c22724bc1161
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-07
+
+    Parse, store and use the filename of the content
+
+ org_fedora_oscap/gui/spokes/oscap.py |  3 +--
+ org_fedora_oscap/ks/oscap.py         | 12 ++++++++++++
+ tests/ks_oscap_test.py               |  1 +
+ 3 files changed, 14 insertions(+), 2 deletions(-)
+
+commit 85ee10f007e20a743014d035327ea172f2bfa54a
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-07
+
+    Create ensure_dir_exists function in the utils module
+    
+    It is a code that is repeated in multiple places again and again.
+
+ org_fedora_oscap/common.py     |  4 ++--
+ org_fedora_oscap/data_fetch.py |  5 +++--
+ org_fedora_oscap/utils.py      | 38 ++++++++++++++++++++++++++++++++++++++
+ tests/common_test.py           | 30 ++++++------------------------
+ 4 files changed, 49 insertions(+), 28 deletions(-)
+
+commit 7928c795baff1b655af2fc33709ee14e977111e4
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-07
+
+    Use recv and sendall instead of read and write on a socket
+    
+    read and write are only methods of the SSL-wrapped socket.
+
+ org_fedora_oscap/data_fetch.py | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+commit 85238f9bdc53cf42df60cbdac7202d8ed49c4a0f
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-07
+
+    Allow enclosing values in quotes
+
+ org_fedora_oscap/ks/oscap.py | 5 ++++-
+ tests/ks_oscap_test.py       | 4 ++--
+ 2 files changed, 6 insertions(+), 3 deletions(-)
+
+commit 7f7febb5420fbc986c17f66932e379280e543ec4
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-06
+
+    Change status when waiting for data fetching
+    
+    Also fix bug with spoke not being ready if no kickstart data is given and rename
+    the waiting function to have a more mnemonic name.
+
+ org_fedora_oscap/gui/spokes/oscap.py | 18 +++++++++++-------
+ 1 file changed, 11 insertions(+), 7 deletions(-)
+
+commit 7a80809dc752b2e01f54608163ab967d5edda91b
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-06
+
+    Start data fetching when the spoke is initialized
+    
+    And stay unready until data fetching finishes.
+
+ org_fedora_oscap/common.py           |  2 ++
+ org_fedora_oscap/data_fetch.py       |  3 ++
+ org_fedora_oscap/gui/spokes/oscap.py | 62 +++++++++++++++++++++++++++++++++++-
+ 3 files changed, 66 insertions(+), 1 deletion(-)
+
+commit 9dfd7387f5fd81cc6eab3e390f5f52b738a1d362
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-06
+
+    Add function that waits for network connection and schedules data fetching
+
+ org_fedora_oscap/common.py | 43 +++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 43 insertions(+)
+
+commit 521743a1d4d2bd569324b4e9c5be822bdd6a9f3e
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-06
+
+    Create directory for the out_file in data_fetch
+    
+    If the directory doesn't exist it needs to be created.
+    
+    Also fix bug with nondefined exception class.
+
+ org_fedora_oscap/data_fetch.py | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+
+commit 464ee10e0585113f45c29ed30f5757fded1751ff
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-06
+
+    Change 'certificate' item to 'certificates' and parse it
+    
+    It should be a path to a file containing the whole CA certificates chain,
+    so not only one certificate.
+
+ org_fedora_oscap/ks/oscap.py | 10 +++++++---
+ 1 file changed, 7 insertions(+), 3 deletions(-)
+
+commit 4a7a1f3f3872aeb7e1c1eb96a9e0746194619357
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-06
+
+    Move rule handling to a separate module
+
+ org_fedora_oscap/common.py        | 192 +--------------------------------
+ org_fedora_oscap/rule_handling.py | 219 ++++++++++++++++++++++++++++++++++++++
+ tests/common_test.py              |  66 ------------
+ tests/rule_handling_test.py       |  91 ++++++++++++++++
+ 4 files changed, 311 insertions(+), 257 deletions(-)
+
+commit 29ad977bbe2ef6b69bd3c5683a3b04d78eb249d3
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-06
+
+    Remove placeholder data
+
+ org_fedora_oscap/gui/spokes/oscap.glade | 36 ---------------------------------
+ 1 file changed, 36 deletions(-)
+
+commit ad006a186d4ca06d638d1d27ac58fab4f42cf57a
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-04
+
+    Add and export general fetch_data function
+    
+    Everything else should be private and used according to the protocol used
+    (begining of the URL).
+
+ org_fedora_oscap/data_fetch.py | 31 ++++++++++++++++++++++++++++++-
+ 1 file changed, 30 insertions(+), 1 deletion(-)
+
+commit 2d6c56e33de2bb668d59c734ee32b055eaf3bdde
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-04
+
+    Add tests for directory creation in run_oscap_remediate
+
+ tests/common_test.py | 30 ++++++++++++++++++++++++++++++
+ 1 file changed, 30 insertions(+)
+
+commit b188155f286a80c4bb7dc20dc3d4821b15c5b688
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-04
+
+    Add tests for the run_oscap_remediate function
+
+ tests/common_test.py | 110 +++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 110 insertions(+)
+
+commit 0b8d2097ce309f87208e103ed97a960448d9f9a1
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-04
+
+    Use docstring format the Sphinx tool requires
+
+ org_fedora_oscap/common.py           | 56 ++++++++++++++++++------------------
+ org_fedora_oscap/data_fetch.py       | 26 ++++++++---------
+ org_fedora_oscap/gui/spokes/oscap.py | 32 ++++++++++-----------
+ org_fedora_oscap/ks/oscap.py         | 28 +++++++++---------
+ 4 files changed, 71 insertions(+), 71 deletions(-)
+
+commit 1e07d233b657dc0daf46a94b429bb5eceec679f5
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-03
+
+    Add function to get fix rules for the pre-install phase
+    
+    These are needed to inform user if his/her current configuration is
+    complying with the chosen profile.
+
+ org_fedora_oscap/common.py | 62 +++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 61 insertions(+), 1 deletion(-)
+
+commit 38a792082aa70999bcfa4979beeac2e47c0bb3f0
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-03
+
+    Return oscap's stdout when running remediation
+    
+    It may be useful and the caller can always ignore it.
+
+ org_fedora_oscap/common.py | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+commit 9500bf8fb28dd9891d66214512e63ce044e9c2ae
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-02
+
+    Add a simple script simplifying the oscap tool invocation
+    
+    It's painful to write all the arguments again and again.
+
+ testing_files/run_oscap_test.sh | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+commit 372e9f1043b761c503fc6098f1444ce4d817e91a
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-02
+
+    Add testing XCCDF using an SCE check
+
+ testing_files/check.sh          |  7 +++++++
+ testing_files/testing_xccdf.xml | 17 +++++++++++++++++
+ 2 files changed, 24 insertions(+)
+
+commit 9781f5dfa9bb8780577b4be98259de3e9c9d8f87
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-02
+
+    Add a function for running the oscap tool
+
+ org_fedora_oscap/common.py | 73 ++++++++++++++++++++++++++++++++++++++++++++--
+ 1 file changed, 71 insertions(+), 2 deletions(-)
+
+commit 8c26da8c3f2419e849d91f49e2f82967fb98e341
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-02
+
+    Add a docstring to the finalize method
+
+ org_fedora_oscap/ks/oscap.py | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+commit 946cc3535fed512cf9e4e94cc2ebabf73119f823
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-02
+
+    Remove old tests at the ends of sources
+
+ org_fedora_oscap/common.py   | 21 ---------------------
+ org_fedora_oscap/ks/oscap.py | 29 -----------------------------
+ 2 files changed, 50 deletions(-)
+
+commit 3305dd6e0cf197ea80cc338dff6c76d71f83090d
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-02
+
+    Change 'rpm' to 'RPM' as content type and tests for it
+    
+    Also add some checks if the RPM content is used.
+
+ org_fedora_oscap/ks/oscap.py | 18 ++++++----
+ tests/ks_oscap_test.py       | 82 ++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 93 insertions(+), 7 deletions(-)
+
+commit 65b90223c2507a61b6216c2d4a8ad047cd56b40b
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-02
+
+    Add support for the xccdf-path and cpe-path kickstart lines
+
+ org_fedora_oscap/ks/oscap.py | 16 ++++++++++++++++
+ tests/ks_oscap_test.py       |  6 ++++++
+ 2 files changed, 22 insertions(+)
+
+commit daa0743cf9017ee757830fe6332cf59e601c3cea
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-02
+
+    Use indent not ident for parameter affecting indentation
+
+ org_fedora_oscap/ks/oscap.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit fefb81b7bf14311b91a6c539a561e40dfb0613eb
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-04-01
+
+    First version of the module for data fetching
+    
+    Supports server certificate validation if HTTPS is used. Needs to cover more
+    URL formats (hda:, LABEL=XXXX:, etc.).
+
+ org_fedora_oscap/data_fetch.py | 139 +++++++++++++++++++++++++++++++++++++++++
+ tests/data_fetch_test.py       |  47 ++++++++++++++
+ 2 files changed, 186 insertions(+)
+
+commit 85c0c011b5d3e5d215e7a3e063aba1cfd923c9c8
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-03-31
+
+    Add test for the OSCAPdata's __str__ method
+    
+    Also check if the output is correctly parsed by another instance.
+
+ tests/ks_oscap_test.py | 23 +++++++++++++++++++++--
+ 1 file changed, 21 insertions(+), 2 deletions(-)
+
+commit ebb786d709940871ab9b68f6f1be2fbb2e6245f4
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-03-30
+
+    File for testing oscap feature to return fixes for the addon
+    
+    Also move testing files to a separate directory.
+
+ testing_files/test_report_anaconda_fixes.xccdf.xml | 59 ++++++++++++++++++++++
+ testing_ds.xml => testing_files/testing_ds.xml     |  0
+ 2 files changed, 59 insertions(+)
+
+commit 4af00cc2740d6448965a5f3d67abb0cb7113ea15
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-03-30
+
+    XML with a SCAP datastream for testing purposes
+    
+    An XML file with a datastream collection containing one datastream with two
+    checklists, one check and a profile with a rule using the check and having a fix
+    element for testing remediation.
+
+ testing_ds.xml | 84 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 84 insertions(+)
+
+commit 509aa99808e60d40cef752275cf556a662779bc0
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-03-29
+
+    Fix the names of the packages and move them to a better place
+    
+    OpenSCAP packages use 'openscap' prefix not 'oscap'. Also their should
+    live in a better place than in the middle of the code.
+
+ org_fedora_oscap/ks/oscap.py | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+commit 78597534bedd8a061e36c976bf2611477546d04e
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-03-29
+
+    Add a unittest for the basic kickstart parsing
+
+ tests/ks_oscap_test.py | 24 ++++++++++++++++++++++++
+ 1 file changed, 24 insertions(+)
+
+commit ed34f303e6ab80443c36e55d928e4079f4fc734e
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-03-29
+
+    Return the whole %addon section in the __str__ method
+    
+    Anaconda won't add the begining nor the end of the section.
+    
+    Also be more clever with the newlines.
+
+ org_fedora_oscap/ks/oscap.py | 21 ++++++++++-----------
+ 1 file changed, 10 insertions(+), 11 deletions(-)
+
+commit efdcc55eef6acf55f6fd10f6d177ea7235f9d400
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-03-29
+
+    Mark required packages for installation
+    
+    Some packages need to be installed to the target system
+    to allow remediation in chroot at the end of the installation
+    and also checks during first boot.
+
+ org_fedora_oscap/ks/oscap.py | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+commit b677c203379f827521a644dae7fc99fb634332fc
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-03-29
+
+    Add a set of unit tests and a target to run them
+
+ tests/common_test.py | 93 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 93 insertions(+)
+
+commit 2a34f4afd37db166735ef017995b90380ced1f77
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-03-28
+
+    Fix the way how new items in PartRules are created
+    
+    Creating an item in the __getitem__ really is not a good idea.
+
+ org_fedora_oscap/common.py | 18 ++++++++++++------
+ 1 file changed, 12 insertions(+), 6 deletions(-)
+
+commit 88b45803cca08d084ce26159c101a0d6e331a215
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-03-28
+
+    Include only the key that was searched to the exception
+    
+    This way it can be checked whether the first word was correctly parsed.
+
+ org_fedora_oscap/common.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 06075bea1013b4985cb7ca8382374531818736e7
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-03-27
+
+    Add 'xccdf-id' item that is required in case of datastream
+
+ org_fedora_oscap/ks/oscap.py | 16 ++++++++++++++--
+ 1 file changed, 14 insertions(+), 2 deletions(-)
+
+commit 1720e5616f06c3c245b8b5493022d5bdbf1192b2
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-03-27
+
+    Simple test for the kickstart parsing code and few fixes
+
+ org_fedora_oscap/ks/oscap.py | 47 +++++++++++++++++++++++++++++++++++++++-----
+ 1 file changed, 42 insertions(+), 5 deletions(-)
+
+commit 0fe183c877e3bfc5dce12d9f8b4b5f0b2dfeab2e
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-03-27
+
+    Add classes for parsing rules from XCCDF
+    
+    XCCDFs may contain <fix> tags with rules for the pre-installation phase
+    that need to be parsed and then enforced.
+
+ org_fedora_oscap/common.py | 239 +++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 239 insertions(+)
+
+commit 9dcceceabfa11cbe5992de3ef72efd5417bd4b47
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-03-26
+
+    Add finalize method that checks we have all required data
+
+ org_fedora_oscap/ks/oscap.py | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+
+commit 0c7d284873ca053f183c42ed508b463815bec435
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-03-24
+
+    Basics of the kickstart support
+    
+    Parsing data from the kickstart %addon section.
+
+ org_fedora_oscap/ks/__init__.py |   0
+ org_fedora_oscap/ks/oscap.py    | 160 ++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 160 insertions(+)
+
+commit a71061f5fc9ddfcaa3e37b64799fe08fa4c1e625
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2013-02-22
+
+    Basics for the OpenSCAP Anaconda addon
+
+ org_fedora_oscap/__init__.py                |   0
+ org_fedora_oscap/gui/__init__.py            |   0
+ org_fedora_oscap/gui/categories/__init__.py |   0
+ org_fedora_oscap/gui/categories/security.py |  39 +++++
+ org_fedora_oscap/gui/spokes/__init__.py     |   0
+ org_fedora_oscap/gui/spokes/oscap.glade     | 220 ++++++++++++++++++++++++++++
+ org_fedora_oscap/gui/spokes/oscap.py        | 172 ++++++++++++++++++++++
+ 7 files changed, 431 insertions(+)
+
+commit c1f45957f7838f72f24e7e9167e5bc25007f27ac
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   2012-10-31
+
+    Initial commit.

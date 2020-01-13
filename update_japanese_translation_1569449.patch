@@ -1,0 +1,91 @@
+--- a/po/ja.po	2018-06-04 18:16:02.000000000 +0200
++++ b/po/ja.po	2018-08-20 10:42:37.535040920 +0200
+@@ -1,10 +1,11 @@
+ # Ludek Janda <ljanda@redhat.com>, 2017. #zanata
++# Ludek Janda <ljanda@redhat.com>, 2018. #zanata
+ msgid ""
+ msgstr ""
+ "Project-Id-Version: PACKAGE VERSION\n"
+ "Report-Msgid-Bugs-To: \n"
+ "POT-Creation-Date: 2018-06-04 14:37+0200\n"
+-"PO-Revision-Date: 2017-12-11 03:10+0000\n"
++"PO-Revision-Date: 2018-08-08 12:52+0000\n"
+ "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+ "Language-Team: Japanese\n"
+ "MIME-Version: 1.0\n"
+@@ -12,7 +13,7 @@
+ "Content-Transfer-Encoding: 8bit\n"
+ "Language: ja\n"
+ "Plural-Forms: nplurals=1; plural=0\n"
+-"X-Generator: Zanata 4.4.5\n"
++"X-Generator: Zanata 4.6.0\n"
+ 
+ #: ../org_fedora_oscap/rule_handling.py:392
+ #, python-brace-format
+@@ -21,6 +22,8 @@
+ "in the partitioning layout before installation can occur with a security "
+ "profile"
+ msgstr ""
++"{0} "
++"は、別のパーティションもしくは論理ボリューム上になければなりません。また、セキュリティープロファイルがインストールされる前にパーティションレイアウトに作成されなければなりません"
+ 
+ #. template for the message
+ #: ../org_fedora_oscap/rule_handling.py:403
+@@ -61,19 +64,19 @@
+ 
+ #: ../org_fedora_oscap/rule_handling.py:754
+ msgid "Kdump will be disabled on startup"
+-msgstr ""
++msgstr "Kdump は起動時に無効になります"
+ 
+ #: ../org_fedora_oscap/rule_handling.py:756
+ msgid "Kdump will be enabled on startup"
+-msgstr ""
++msgstr "Kdump は起動時に有効になります"
+ 
+ #: ../org_fedora_oscap/rule_handling.py:903
+ msgid "Firewall will be disabled on startup"
+-msgstr ""
++msgstr "ファイアウォールは起動時に無効になります"
+ 
+ #: ../org_fedora_oscap/rule_handling.py:910
+ msgid "Firewall will be enabled on startup"
+-msgstr ""
++msgstr "ファイアウォールは起動時に有効になります"
+ 
+ #: ../org_fedora_oscap/rule_handling.py:918
+ #: ../org_fedora_oscap/rule_handling.py:955
+@@ -81,21 +84,21 @@
+ msgid ""
+ "service '%s' has been added to the list of services to be added to the "
+ "firewall"
+-msgstr ""
++msgstr "サービス '%s' が、ファイアウォールに追加予定のサービス一覧に追加されました"
+ 
+ #: ../org_fedora_oscap/rule_handling.py:925
+ #: ../org_fedora_oscap/rule_handling.py:966
+ #, python-format
+ msgid ""
+ "port '%s' has been added to the list of ports to be added to the firewall"
+-msgstr ""
++msgstr "ポート '%s' が、ファイアウォールに追加予定のポート一覧に追加されました"
+ 
+ #: ../org_fedora_oscap/rule_handling.py:932
+ #: ../org_fedora_oscap/rule_handling.py:977
+ #, python-format
+ msgid ""
+ "trust '%s' has been added to the list of trusts to be added to the firewall"
+-msgstr ""
++msgstr "トラスト '%s' が、ファイアウォールに追加予定のトラスト一覧に追加されました"
+ 
+ #: ../org_fedora_oscap/rule_handling.py:986
+ #: ../org_fedora_oscap/rule_handling.py:1001
+@@ -103,7 +106,7 @@
+ msgid ""
+ "service '%s' has been added to the list of services to be removed from the "
+ "firewall"
+-msgstr ""
++msgstr "サービス '%s' が、ファイアウォールから削除予定のサービス一覧に追加されました"
+ 
+ #: ../org_fedora_oscap/ks/oscap.py:423
+ #, python-format

@@ -1,0 +1,74 @@
+From 03734db97a920a742375ad162b95d08b78866036 Mon Sep 17 00:00:00 2001
+From: Vratislav Podzimek <vpodzime@redhat.com>
+Date: Tue, 13 Sep 2016 17:23:37 +0200
+Subject: [PATCH] Properly handle tailoring files for datastreams
+
+We need to load the tailoring file and iterate over tailoring profiles like we
+do for Benchmark+tailoring.
+
+Resolves: rhbz#1364929
+Signed-off-by: Vratislav Podzimek <vpodzime@redhat.com>
+---
+ org_fedora_oscap/content_handling.py | 25 +++++++++++++++++++++----
+ 1 file changed, 21 insertions(+), 4 deletions(-)
+
+diff --git a/org_fedora_oscap/content_handling.py b/org_fedora_oscap/content_handling.py
+index 0921ad9..fa4266b 100644
+--- a/org_fedora_oscap/content_handling.py
++++ b/org_fedora_oscap/content_handling.py
+@@ -151,6 +151,9 @@ class DataStreamHandler(object):
+         # is used to speed up getting lists of profiles
+         self._profiles_cache = dict()
+ 
++        # store the tailoring file path (if any) for later use
++        self._tailoring_file_path = tailoring_file_path
++
+         if not os.path.exists(dsc_file_path):
+             msg = "Invalid file path: '%s'" % dsc_file_path
+             raise DataStreamHandlingError(msg)
+@@ -165,10 +168,6 @@ class DataStreamHandler(object):
+         if OSCAP.xccdf_session_load(self._session) != 0:
+             raise DataStreamHandlingError(OSCAP.oscap_err_desc())
+ 
+-        if tailoring_file_path:
+-            OSCAP.xccdf_session_set_user_tailoring_file(self._session,
+-                                                        tailoring_file_path)
+-
+         if not OSCAP.xccdf_session_is_sds(self._session):
+             msg = "'%s' is not a data stream collection" % dsc_file_path
+             raise DataStreamHandlingError(msg)
+@@ -282,6 +281,11 @@ class DataStreamHandler(object):
+ 
+         OSCAP.xccdf_session_set_datastream_id(self._session, data_stream_id)
+         OSCAP.xccdf_session_set_component_id(self._session, checklist_id)
++
++        if self._tailoring_file_path:
++            OSCAP.xccdf_session_set_user_tailoring_file(self._session,
++                                                        self._tailoring_file_path)
++
+         if OSCAP.xccdf_session_load(self._session) != 0:
+             raise DataStreamHandlingError(OSCAP.oscap_err_desc())
+ 
+@@ -305,6 +309,19 @@ class DataStreamHandler(object):
+ 
+             profiles.append(info)
+ 
++        if self._tailoring_file_path:
++            tailoring = OSCAP.xccdf_policy_model_get_tailoring(policy_model)
++            profile_itr = OSCAP.xccdf_tailoring_get_profiles(tailoring)
++            while OSCAP.xccdf_profile_iterator_has_more(profile_itr):
++                profile = OSCAP.xccdf_profile_iterator_next(profile_itr)
++
++                id_ = OSCAP.xccdf_profile_get_id(profile)
++                title = oscap_text_itr_get_text(OSCAP.xccdf_profile_get_title(profile))
++                desc = oscap_text_itr_get_text(OSCAP.xccdf_profile_get_description(profile))
++                info = ProfileInfo(id_, title, desc)
++
++                profiles.append(info)
++
+         OSCAP.xccdf_profile_iterator_free(profile_itr)
+ 
+         # cache the result
+-- 
+2.7.4
+
